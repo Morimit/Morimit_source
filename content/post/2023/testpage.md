@@ -6,7 +6,8 @@ lastmode:
 image: 
 math: 
 license: 
-tags: test
+tags: 
+    - test
 hidden: false
 comments: true
 draft: false
