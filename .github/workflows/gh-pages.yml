@@ -29,5 +29,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ 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 }}
           publish_dir: ./public
