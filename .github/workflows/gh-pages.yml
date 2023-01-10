@@ -1,20 +1,17 @@
-name: GitHub Pages
+name: Deploy Hugo Site to Github Pages on Master Branch
 
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+  build-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - uses: actions/checkout@v1  # v2 does not have submodules option now
+       # with:
+       #   submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -27,7 +24,10 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ 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 }}
-          publish_dir: ./public
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} # 这里的 ACTIONS_DEPLOY_KEY 则是上面设置 Private Key的变量名
+          external_repository: Morimit/Morimit.github.io # Pages 远程仓库 
+          publish_dir: ""
+          keep_files: false # remove existing files
+          publish_branch: master  # deploying branch
+          commit_message: ${{ github.event.head_commit.message }}
