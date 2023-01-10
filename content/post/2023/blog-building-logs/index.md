@@ -8,7 +8,6 @@ math:
 tags:
   - Log
 license: false
-comments: true
 draft: false
 ---
 
@@ -28,7 +27,7 @@ draft: false
 - Deleted the categories and search in the left sidebar.
 
 ### 2023.1.10
-- Signed up a new GitHub account, created a new repo automatically linked with GitHub Pages.
+- Signed up a new GitHub account, created a public repo automatically linked with GitHub Pages, and a another private repo ready to hold site source files.
 - Conneted git with different GitHub accounts (SSH).
-- Pushed the public file to the repo.
-- 
+- Create a brand new SSH key in the local file `~/.ssh/`, and configurated GitHub Action.
+- 碎碎念：因为不熟悉git，在查各种命令的时候花费了不少时间。

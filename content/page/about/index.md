@@ -6,6 +6,8 @@ aliases:
   - about-us
   - about-hugo
   - contact
+
+comments: true
 menu:
     main: 
         weight: -70
