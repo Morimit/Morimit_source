@@ -9,6 +9,6 @@ license:
 tags: test
 hidden: false
 comments: true
-draft: true
+draft: false
 ---
 This is a test page.
