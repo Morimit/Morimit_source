@@ -1,14 +1,13 @@
 ---
 title: "Blog Workflow"
-description: The building steps and workflow of this site. 
+description: The building steps and workflow of this site
 date: 2023-01-11T20:59:31+08:00
-lastmode: 2023-01-11
-image: 
+lastmod: 2023-01-11
+image: Journey2.png
 math: 
-license: false
 tags:
     - Blog
-hidden: false
+license: false
 draft: false
 ---
 

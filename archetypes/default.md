@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 description: 
 date: {{ .Date }}
-lastmode:
+lastmod:
 image: 
 math: 
 license: 
