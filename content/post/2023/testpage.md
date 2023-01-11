@@ -7,7 +7,7 @@ image:
 math: 
 license: 
 tags: 
-    - test
+    - daily
 hidden: false
 draft: true
 ---

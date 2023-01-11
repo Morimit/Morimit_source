@@ -7,6 +7,7 @@ image: Journey.png
 math: 
 tags:
   - Log
+  - Blog
 license: false
 draft: false
 ---
