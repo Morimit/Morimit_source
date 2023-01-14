@@ -15,6 +15,7 @@
     {{ end }}
 
 
+
 {{/*{{- if $query -}}
     {{- $archivesPage := index $query 0 -}}
     <section class="widget categories">
@@ -42,8 +43,6 @@
     {{- warnf "Archives page not found. Create a page with layout: archives." -}}
 {{- end -}}*/}}
 
-
-
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $Hidden := where .Site.RegularPages "Params.hidden" "=" true }}
 {{ $filtered := ($pages | intersect $Hidden) }}
@@ -65,4 +64,6 @@
 {{ end }}
 
 {{ end }}
+
+
 
