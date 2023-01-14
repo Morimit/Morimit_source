@@ -8,7 +8,7 @@ math:
 license: 
 categories: 
     - collection
-hidden: true
+hidden: false
 draft: false
 ---
 

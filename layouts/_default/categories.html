@@ -44,7 +44,7 @@
 {{- end -}}*/}}
 
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-{{ $Hidden := where .Site.RegularPages "Params.hidden" "=" true }}
+{{ $Hidden := where .Site.RegularPages "Params.hidden" "!=" true }}
 {{ $filtered := ($pages | intersect $Hidden) }}
 
 {{ range $filtered.GroupByDate "2006" }}

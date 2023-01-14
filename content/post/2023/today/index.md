@@ -8,7 +8,7 @@ math:
 license: 
 categories: 
     - today
-hidden: true
+hidden: false
 draft: false
 ---
 This is a test page.
