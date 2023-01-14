@@ -21,7 +21,7 @@ hasCJKLanguage: true
 permalinks:
     post: /:year/:slug/
     page: /:slug/
-
+    collection: /:slug/
 params:
     mainSections:
         - post
