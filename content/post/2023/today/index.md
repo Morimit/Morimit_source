@@ -6,7 +6,8 @@ lastmode:
 image:
 math: 
 license: 
-categories: today
+categories: 
+    - today
 hidden: true
 draft: false
 ---

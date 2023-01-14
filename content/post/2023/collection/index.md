@@ -6,7 +6,8 @@ lastmode:
 image: Sakura_Magic_circle.webp
 math: 
 license: 
-categories: collection
+categories: 
+    - collection
 hidden: true
 draft: false
 ---

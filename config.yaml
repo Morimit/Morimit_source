@@ -22,6 +22,7 @@ permalinks:
     post: /:year/:slug/
     page: /:slug/
     categories: /:slug/
+    
 params:
     mainSections:
         - post
