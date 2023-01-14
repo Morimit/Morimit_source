@@ -20,6 +20,7 @@ draft: false
 - [Hugo-stack-theme 主题魔改版](https://mantyke.icu/posts/2022/stack-theme-mod/)
 - [不是从零开始的 Hugo 建站笔记](https://fourxiajiao.github.io/2022/hugo-blog/)
 - [Create and host a blog with Hugo and GitHub Pages in less than 30 minutes](https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/)
+- [Hugo | 在文章中插入轮播图片](https://mantyke.icu/posts/2021/cf2cf0fb/)
 
 
 ## Log
@@ -31,4 +32,7 @@ draft: false
 - Signed up a new GitHub account, created a public repo automatically linked with GitHub Pages, and a another private repo ready to hold site source files.
 - Conneted git with different GitHub accounts (SSH).
 - Create a brand new SSH key in the local file `~/.ssh/`, and configurated GitHub Action.
-- 碎碎念：因为不熟悉git，在查各种命令的时候花费了不少时间。
+
+### 2023.1.14
+- Modified the categories archive wection.
+- Added imgloop.

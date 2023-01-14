@@ -8,6 +8,7 @@ math:
 tags:
     - Blog
 license: false
+hidden: false
 draft: false
 ---
 

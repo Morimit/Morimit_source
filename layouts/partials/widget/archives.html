@@ -1,3 +1,4 @@
+
 {{- $query := first 1 (where .Site.Pages "Layout" "==" "archives") -}}
 {{- if $query -}}
     {{- $archivesPage := index $query 0 -}}

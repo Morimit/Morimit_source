@@ -28,6 +28,8 @@ params:
     featuredImageField: image
     rssFullContent: true
     favicon:
+#加入图片轮播
+    enableimgloop: true
 
     footer:
         since: 2023
@@ -135,7 +137,6 @@ params:
         enabled:
             - search
             - toc
-            - categories
             - archives
             - tag-cloud
 
