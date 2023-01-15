@@ -7,8 +7,8 @@
             {{ partial "helper/icon" "infinity" }}
         </div>
         <h2 class="widget-title section-title">{{ T "widget.archives.title" }}</h2>
-
-        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+        {{/*{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}*/}}
+        {{ $pages := where .Site.RegularPages "Section" "post" }}
         {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
         {{ $filtered := ($pages | intersect $notHidden) }}
         {{ $archives := $filtered.GroupByDate "2006" }}

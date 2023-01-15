@@ -1,5 +1,6 @@
 {{ define "main" }}
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{/*{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}*/}}
+    {{ $pages := where .Site.RegularPages "Section" "post" }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}
     {{ $pag := .Paginate ($filtered) }}

@@ -43,9 +43,11 @@
     {{- warnf "Archives page not found. Create a page with layout: archives." -}}
 {{- end -}}*/}}
 
-{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{/*{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}*/}}
+{{ $pages := where .Site.RegularPages "Section" "life" }}
 {{ $Hidden := where .Site.RegularPages "Params.hidden" "!=" true }}
 {{ $filtered := ($pages | intersect $Hidden) }}
+
 
 {{ range $filtered.GroupByDate "2006" }}
 {{ $id := lower (replace .Key " " "-") }}

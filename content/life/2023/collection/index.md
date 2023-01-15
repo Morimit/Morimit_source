@@ -1,6 +1,6 @@
 ---
 title: "小樱"
-description: 二次元插画 | 适合练习平涂
+description: 二次元插画 
 date: 2023-01-10T20:56:54+08:00
 lastmode:
 image: Sakura_Magic_circle.webp

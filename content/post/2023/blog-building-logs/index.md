@@ -34,5 +34,7 @@ draft: false
 - Create a brand new SSH key in the local file `~/.ssh/`, and configurated GitHub Action.
 
 ### 2023.1.14
-- Modified the categories archive wection.
 - Added imgloop.
+
+## 2023.1.15
+- Added the My Life section (from categories section).
