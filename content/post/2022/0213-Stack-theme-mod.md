@@ -58,7 +58,7 @@ Github仓库地址：[Mantyke](https://github.com/Mantyke)/[stack-theme-mod](htt
 
 友链头像放在`/assets/link-img`，友链数据放在`/data/links.json`
 
-```
+```json
 [
     {
         "title": "小球飞鱼",
