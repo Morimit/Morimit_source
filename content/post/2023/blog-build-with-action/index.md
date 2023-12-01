@@ -3,7 +3,7 @@ title: "Blog Build With GitHub Action"
 description: 
 date: 2023-01-010T13:50:03+08:00
 lastmod: 2023-01-10
-image: 
+image: actions.PNG
 math: 
 license: 
 tags:

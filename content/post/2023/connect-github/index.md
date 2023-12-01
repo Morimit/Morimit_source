@@ -3,7 +3,7 @@ title: "Connect Git to Github"
 description: 用SSH方式配置多个账号连接GitHub
 date: 2023-1-10T16:22:12+08:00
 lastmod: 2023-01-19
-image: 
+image: SSH.PNG
 math: 
 license: 
 tags:
