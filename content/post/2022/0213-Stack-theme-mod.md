@@ -7,7 +7,7 @@ tags:
   - Hugo
 image: 
 slug: stack-theme-mod
-draft: false
+draft: true
 ---
 Github仓库地址：[Mantyke](https://github.com/Mantyke)/[stack-theme-mod](https://github.com/Mantyke/Hugo-stack-theme-mod)
 

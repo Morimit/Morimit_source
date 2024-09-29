@@ -5,7 +5,7 @@ date: 2020-09-09
 slug: test-chinese
 image: helena-hertz-wWZzXlDpMog-unsplash.jpg
 draft: false
-hidden: false
+hidden: true
 ---
 ## 短代码测试
 

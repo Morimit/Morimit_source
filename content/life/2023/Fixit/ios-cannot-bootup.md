@@ -11,7 +11,7 @@ categories:
     - Fixit
 hidden: false
 comments: true
-draft: false
+draft: true
 ---
 
 - 2023.10 ipad在某一天突然开不了机，一直在白底黑苹果界面和完全黑屏之间反复切换，直到没电了才真正关机。

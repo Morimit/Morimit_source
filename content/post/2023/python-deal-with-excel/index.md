@@ -1,16 +1,15 @@
 ---
 title: "Python Deal With Excel"
-description: this is the description
+description: 使用openpyxl库将每日微信接龙的录入到考勤表
 date: 2023-10-05T09:58:39+08:00
 lastmod: 2023-10-13T10:22:39+08:00
-# image: openpyxl.PNG
+image: openpyxl.PNG
 license: 
 tags:
     - Python
 hidden: false
 comments: true
 draft: false
-summary: 使用openpyxl库将每日微信接龙的录入到考勤表中
 ---
 ## 需求
 将微信接龙打卡更新到考勤表中，已到的人✔，未到的人❌
