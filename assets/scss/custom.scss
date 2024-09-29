@@ -28,26 +28,27 @@
 
 blockquote.quote {
     position: relative;
-    margin: 1.5em -10em 0 -10 ;
-    padding-left: 18%;
+    margin: 1.5em -10em 0 1em ;
+    padding-left: 5%;
     padding-right: 15%;
-    border: none;
-    background-color: transparent;;
-    &::before {
-        position: absolute;
-        left: 7%;
-        content: '“';
-        color: var(--color-contrast-low);
-        font-size: 3em;
-        font-weight: bold;
-        line-height: 1;
-    }
+    // border: none;
+    border-left: 5px solid var( --card-text-color-main);
+    background-color: transparent;
+    // &::before {
+    //     position: absolute;
+    //     left: 7%;
+    //     content: '“';
+    //     color: var(--color-contrast-low);
+    //     font-size: 3em;
+    //     font-weight: bold;
+    //     line-height: 1;
+    // }
     &.poetry {
         display: table;
         padding: 0;
-        &::before {
-            left: -1em;
-        }
+        // &::before {
+        //     left: -1em;
+        // }
         p:last-child {
             margin: 0;
         }
@@ -62,24 +63,24 @@ blockquote.quote {
         }
     }
 }
-@media (max-width:650px) {
-    blockquote.quote {
-        &::before {
-            position: absolute;
-            left: 3.5%;          
-        }
-    }
-}
+// @media (max-width:650px) {
+//     blockquote.quote {
+//         &::before {
+//             position: absolute;
+//             left: 3.5%;          
+//         }
+//     }
+// }
 
-@media (max-width:500px) {
-    blockquote.quote {
-        &::before {
-            position: absolute;
-            left: 3.5%; 
-            top: 0.1%         
-        }
-    }
-}
+// @media (max-width:500px) {
+//     blockquote.quote {
+//         &::before {
+//             position: absolute;
+//             left: 3.5%; 
+//             top: 0.1%         
+//         }
+//     }
+// }
 
 
 
@@ -120,7 +121,8 @@ blockquote.quote {
         box-shadow: none;
         
         article {
-            background: var(--card-background);
+            // background: var(--card-background);
+            background-color: var(--article-background);
             border: none;
             box-shadow: var(--shadow-l2);
             margin-bottom: 8px;
@@ -135,11 +137,11 @@ blockquote.quote {
 //修改选中颜色
 ::selection {
     color: #fff;
-    background: #34495e;
+    background: #5ca5c4;
 }
 //图片轮播
 .swiper-container {
-    max-width: 820px;
+    max-width: 300px;
     margin: 2em auto;
 
 }
@@ -155,3 +157,9 @@ blockquote.quote {
         margin: 0 !important;
     }
 }
+
+// 修改图片渲染的大小
+.gallery-image {
+    max-width: 700px;
+}
+

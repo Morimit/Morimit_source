@@ -1,7 +1,7 @@
 baseurl: https://morimit.github.io/
 languageCode: en-us
 theme: stack
-paginate: 5
+# paginate: 5
 title: Miaomi
 
 # Change it to your Disqus shortname before using
@@ -18,6 +18,10 @@ DefaultContentLanguage: en
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: true
 
+# When you set enableGitInfo to true, or enable the feature with the command line flag, 
+#the last modification date for each content page will be the Author Date of the last commit for that file.
+enableGitInfo: true
+
 permalinks:
     post: /:year/:slug/
     page: /:slug/
@@ -29,7 +33,7 @@ params:
     featuredImageField: image
     rssFullContent: true
     favicon:
-#加入图片轮播
+    #加入图片轮播
     enableimgloop: true
 
     footer:
@@ -41,7 +45,7 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji:
+        emoji: 
         subtitle: 在这里存放一些小鱼干
         avatar:
             enabled: true
@@ -53,7 +57,7 @@ params:
         toc: true
         readingTime: true
         license:
-            enabled: true
+            enabled: false
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
@@ -136,9 +140,7 @@ params:
             id:
     widgets:
         enabled:
-            - search
             - toc
-            - archives
             - tag-cloud
 
 
@@ -164,7 +166,7 @@ params:
 
     colorScheme:
         # Display toggle
-        toggle: true
+        toggle: false
 
         # Available values: auto, light, dark
         default: auto
@@ -180,14 +182,21 @@ params:
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
-        - identifier: home
-          name: Home
-          url: /
-          weight: -100
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: -30
           params:
-              ### For demonstration purpose, the home link will be open in a new tab
-              newTab: flase
-              icon: home
+              icon: wave-rect
+
+        # - identifier: home
+        #   name: Home
+        #   url: /
+        #   weight: -100
+        #   params:
+        #       ### For demonstration purpose, the home link will be open in a new tab
+        #       newTab: flase
+        #       icon: home
 
     social:
         - identifier: github
@@ -230,9 +239,9 @@ markup:
             hl_inline: false
             lineAnchors: ""
             lineNoStart: 1
-            lineNos: false
-            lineNumbersInTable: true
+            lineNos: true
+            lineNumbersInTable: false
             noClasses: true
             noHl: false
-            style: solarized-dark
+            style: vs
             tabWidth: 4

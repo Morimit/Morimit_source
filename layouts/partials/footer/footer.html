@@ -16,7 +16,6 @@
 })('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
   pangu.spacingPage();
 });
-
 </script>
 
     <section class="copyright">
@@ -24,11 +23,12 @@
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}
-        {{ now.Format "2006" }} <a href="https://stack-theme-mod.vercel.app/">Miaomi</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
-      {{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共书写了{{$var}}k字·共 {{ len (where .Site.RegularPages "Section" "post") }}篇文章</br><span><p>
+        {{ now.Format "2006" }} <a href="./">Miaomi</a> <i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
+      {{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}
+      共书写了{{$var}}k字·共 {{ len (where .Site.RegularPages "Section" "post") }}篇文章</br><span><p>
     </section>
     
-    <section class="powerby">
+    {{/*  <section class="powerby">
         {{ with .Site.Params.footer.customText }}
             {{ . | safeHTML }} <br/>
         {{ end }}
@@ -42,7 +42,7 @@
         {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
         {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }}<br />
          <!--<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>-->
-    </section>
+    </section>  */}}
 
 <script>
 var s1 = '2023-01-1';//设置为建站时间

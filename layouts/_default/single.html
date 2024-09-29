@@ -64,5 +64,8 @@
     {{ else }}
         {{ partial "sidebar/right.html" . }}
     {{ end }} -->
-    {{ partial "sidebar/right.html" . }}
+    {{/*  {{ partial "sidebar/right.html" . }}  */}}
+    <aside class="sidebar right-sidebar sticky">
+        {{ partial "widget/toc.html" . }}
+    </aside>
 {{ end }}

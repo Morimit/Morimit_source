@@ -11,5 +11,5 @@ categories:
     - Fixit
 hidden: false
 comments: true
-draft: true
+draft: false
 ---

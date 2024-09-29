@@ -1,10 +1,17 @@
 .widget {
     .widget-icon {
         svg {
-            width: 32px;
-            height: 32px;
+            width: 22px;
+            height: 22px;
             stroke-width: 1.6;
             color: var(--body-text-color);
+        }
+    }
+    .tag-icon{
+        svg{
+            width: 30px;
+            height: 30px;
+            stroke-width: 1.6;
         }
     }
 }
@@ -16,13 +23,13 @@
         flex-wrap: wrap;
 
         a {
-            background: var(--card-background);
-            box-shadow: var(--shadow-l1);
+            // background: var(--card-background);
+            // box-shadow: var(--shadow-l1);
             border-radius: 10px;
-            padding: 8px 20px;
+            padding: 8px 14px;
 
             color: var(--card-text-color-main);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             margin-right: 5px;
             font-size: 1.4rem;
             transition: box-shadow 0.3s ease;

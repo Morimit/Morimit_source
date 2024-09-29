@@ -32,12 +32,13 @@
 
     input {
         padding: 40px 20px 20px;
-        border-radius: var(--card-border-radius);
-        background-color: var(--card-background);
-        box-shadow: var(--shadow-l1);
+        // border-radius: var(--card-border-radius);
+        background-color: var(--search-background);
+        // box-shadow: var(--shadow-l1);
         color: var(--card-text-color-main);
         width: 100%;
-        border: 0;
+        border: none;
+        border-bottom: 3px solid white;
         -webkit-appearance: none;
 
         transition: box-shadow 0.3s ease;

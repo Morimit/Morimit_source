@@ -5,7 +5,7 @@ layout: "archives"
 slug: "archives"
 menu:
     main:
-        weight: -90
+        weight: -20
         params: 
-            icon: archives
+            icon: wave-rect
 ---

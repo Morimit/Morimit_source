@@ -1,16 +1,16 @@
 ---
 title: "Python Deal With Excel"
-description: 
+description: this is the description
 date: 2023-10-05T09:58:39+08:00
 lastmod: 2023-10-13T10:22:39+08:00
-image: openpyxl.PNG
-math: 
+# image: openpyxl.PNG
 license: 
 tags:
     - Python
 hidden: false
 comments: true
 draft: false
+summary: 使用openpyxl库将每日微信接龙的录入到考勤表中
 ---
 ## 需求
 将微信接龙打卡更新到考勤表中，已到的人✔，未到的人❌
@@ -18,11 +18,13 @@ draft: false
 ## 思路拆分
 对比两列，一列是人员姓名（固定列），一列是此人当日打卡情况。每次微信打卡后，复制接龙到表格的对比列中，如果固定列的名字有出现在对比列中，则更新当日打卡记录。
 
+
 ```python
 cells = sheet['A3:A11'] #固定列
 cells2 = sheet['N3:N12'] #对比列
 cells3 = sheet['C3:C11'] #保存到新列，每日更新
 ```
+  
 
 | 姓名\日期 | 10月5日 | 10月6日 |
 | --------- | ------- | ------- |
@@ -33,6 +35,8 @@ cells3 = sheet['C3:C11'] #保存到新列，每日更新
 
 使用的python包：openpyxsl模块
 参考教程：https://blog.csdn.net/weixin_44288604/article/details/120731317
+
+ 
 
 ```python
 import os
@@ -77,6 +81,7 @@ for k in cells3:
 workbook.save('志愿者考勤表.xlsx') #记得保存，否则更改不生效
 ```
 
+
 ## 需求变更
 - [ ] 要求整张表的行列对调
 
@@ -84,6 +89,8 @@ workbook.save('志愿者考勤表.xlsx') #记得保存，否则更改不生效
 | --------- | ---- | ---- | ---- |
 | 10月5日   | ✔    | ❌    | ✔     |
 | 10月6日   | ✔   | ✔    |  ✔    |
+
+ 
 
 ```python
 import os
@@ -134,3 +141,4 @@ for k in sheet.iter_rows(min_row=5, max_row=5, min_col=2, max_col=10):
             
 workbook.save('志愿者考勤表.xlsx')
 ```
+  

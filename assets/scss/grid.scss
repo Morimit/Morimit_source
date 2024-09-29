@@ -1,5 +1,5 @@
 .container {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
 
     .left-sidebar {
@@ -17,38 +17,38 @@
 
     &.extended {
         @include respond(md) {
-            max-width: 1024px;
-            --left-sidebar-max-width: 25%;
+            // max-width: 1024px;
+            --left-sidebar-max-width: 30%;
             --right-sidebar-max-width: 30%;
         }
 
         @include respond(lg) {
-            max-width: 1280px;
-            --left-sidebar-max-width: 20%;
+            // max-width: 1280px;
+            --left-sidebar-max-width: 30%;
             --right-sidebar-max-width: 30%;
         }
 
         @include respond(xl) {
-            max-width: 1536px;
-            --left-sidebar-max-width: 15%;
+            // max-width: 1536px;
+            --left-sidebar-max-width: 25%;
             --right-sidebar-max-width: 25%;
         }
     }
 
     &.compact {
         @include respond(md) {
-            --left-sidebar-max-width: 25%;
-            max-width: 768px;
+            --left-sidebar-max-width: 30%;
+            // max-width: 768px;
         }
 
         @include respond(lg) {
-            max-width: 1024px;
-            --left-sidebar-max-width: 20%;
+            // max-width: 1024px;
+            --left-sidebar-max-width: 25%;
         }
 
-        @include respond(xl) {
-            max-width: 1280px;
-        }
+        // @include respond(xl) {
+        //     max-width: 1280px;
+        // }
     }
 }
 
@@ -91,6 +91,7 @@
 }
 
 main.main {
+    overflow-y: scroll;
     min-width: 0;
     max-width: 100%;
     flex-grow: 1;
@@ -100,10 +101,10 @@ main.main {
 .main-container {
     min-height: 100vh;
     align-items: flex-start;
-    padding: 0 15px;
+    // padding: 0 15px;
     column-gap: var(--section-separation);
 
-    @include respond(md) {
-        padding: 0 20px;
-    }
+    // @include respond(md) {
+    //     padding: 0 20px;
+    // }
 }

@@ -4,7 +4,7 @@ description: 中文测试
 date: 2020-09-09
 slug: test-chinese
 image: helena-hertz-wWZzXlDpMog-unsplash.jpg
-draft: true
+draft: false
 hidden: false
 ---
 ## 短代码测试

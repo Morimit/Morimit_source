@@ -43,7 +43,8 @@
                             {{ if eq (default true .Params.newTab) true }}target="_blank"{{ end }}
                             {{ with .Name }}title="{{ . }}"{{ end }}
                         >
-                            {{ $icon := default "link" .Params.Icon }}
+                            {{/*  {{ $icon := default "link" .Params.Icon }}  */}}
+                            {{ $icon := .Params.Icon }}
                             {{ with $icon }}
                                 {{ partial "helper/icon" . }}
                             {{ end }}
@@ -61,13 +62,13 @@
 
         <li {{ if $active }} class='current' {{ end }}>
             <a href='{{ .URL | relLangURL }}' {{ if eq .Params.newTab true }}target="_blank"{{ end }}>
-                {{ $icon := default .Pre .Params.Icon }}
+                {{/*  {{ $icon := default .Pre .Params.Icon }}
                 {{ if .Pre }}
                     {{ warnf "Menu item [%s] is using [pre] field to set icon, please use [params.icon] instead.\nMore information: https://docs.stack.jimmycai.com/configuration/custom-menu.html" .URL }}
                 {{ end }}
                 {{ with $icon }}
                     {{ partial "helper/icon" . }}
-                {{ end }}
+                {{ end }}  */}}
                 <span>{{- .Name -}}</span>
             </a>
         </li>
@@ -75,11 +76,15 @@
 
 
     </ol>
+    
     {{ if (default false .Site.Params.colorScheme.toggle) }}
     <li id="dark-mode-toggle">
         {{ partial "helper/icon" "toggle-left" }}
         {{ partial "helper/icon" "toggle-right" }}
         <span>{{ T "darkMode" }}</span>
     </li>
-{{ end }}
+    {{ end }}
+
+    {{- partial "footer/footer" . -}}
+
 </aside>

@@ -39,7 +39,7 @@ draft: false
   - ![ssh-private](ssh-private.PNG)
 - 在项目文件夹中新建一个文件 `.github/workflows/gh-pages.yml`：
   - 添加下面脚本内容：
-```shell 
+```shell {lineNos=true, tabWidth=2}
 name: Deploy Hugo Site to Github Pages on Main Branch
 
 on:

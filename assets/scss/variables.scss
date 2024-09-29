@@ -14,11 +14,14 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 
     --body-background: #00eeff10;
+    // --body-background: white;
+
+    --article-background: #ffffff8f;
 
     --accent-color: #073333ab;
     --accent-color-darker: #2c4e50;
     --accent-color-text: rgb(255, 255, 255);
-    --body-text-color: hsla(180, 20%, 69%, 0.767);
+    --body-text-color: #a0c0c0c4;
 
     --tag-border-radius: 4px;
 
@@ -52,24 +55,27 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Card style
 */
 :root {
-    --card-background: #fff;
+    --left-sidebar-background: #2188ad;
+    --list-background: rgba(226, 243, 244, 0.745);
+    --search-background:#f1feff;
+    --card-background: #ffffff00;
     --card-background-selected: #eaeaea;
 
     --card-text-color-main: rgb(74, 118, 133);
-    --card-text-color-secondary: #747474;
+    --card-text-color-secondary: #4b7177;
     --card-text-color-tertiary: #bababa;
     --card-separator-color: rgba(218, 218, 218, 0.5);
 
-    --card-border-radius: 10px;
+    --card-border-radius: 3px;
 
-    --card-padding: 20px;
+    --card-padding: 10px;
 
     @include respond(md) {
-        --card-padding: 25px;
+        --card-padding: 15px;
     }
 
     @include respond(xl) {
-        --card-padding: 30px;
+        --card-padding: 20px;
     }
 
     --small-card-padding: 25px 20px;
@@ -94,12 +100,13 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 :root {
     --article-font-family: var(--base-font-family);
     --article-font-size: 1.6rem;
+    --article-abstract-size: 1.65rem;
 
     @include respond(md) {
         --article-font-size: 1.65rem; //字号
     }
 
-    --article-line-height: 1.6; //行距
+    --article-line-height: 2.5; //行距
 }
 
 /*
@@ -122,7 +129,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --code-text-color: #808080;
 
     --table-border-color: #dadada;
-    --tr-even-background-color: #efefee;
+    --tr-even-background-color: #e1dbc82e;
 
     &[data-scheme="dark"] {
         --code-background-color: #5f6157;
@@ -131,7 +138,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --table-border-color: #717171;
         --tr-even-background-color: #545454;
 
-        --blockquote-background-color: rgb(75 75 75);
+        --blockquote-background-color: rgb(75, 75, 75);
     }
 }
 
@@ -140,16 +147,16 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Thanks to https://www.figma.com/community/plugin/744987207861965946/Shadow-picker
 */
 :root {
-    --shadow-l1: 0px 4px 8px rgba(182, 49, 49, 0.212), 0px 0px 2px rgba(194, 43, 43, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    --shadow-l2: 0px 10px 20px rgba(240, 22, 22, 0.061), 0px 2px 6px rgba(235, 225, 88, 0.096), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    --shadow-l1: 0px 4px 8px rgba(72, 120, 124, 0.096), 0px 0px 2px rgba(194, 43, 43, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    --shadow-l2: 0px 10px 20px rgba(209, 213, 213, 0.712), 0px 2px 6px rgba(88, 206, 235, 0.096), 0px 0px 1px rgba(0, 0, 0, 0.04);
     --shadow-l3: 0px 10px 20px rgba(206, 75, 75, 0.04), 0px 2px 6px rgba(207, 58, 58, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
     --shadow-l4: 0px 24px 32px rgba(163, 85, 85, 0.04), 0px 16px 24px rgba(170, 63, 63, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
         0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
 [data-scheme="light"] {
-    --pre-text-color: #a1b154;
-    --pre-background-color: #fafafa;
+    --pre-text-color: #b1a854;
+    --pre-background-color: #e1dbc82e;
     @import "partials/highlight/light.scss";
 }
 

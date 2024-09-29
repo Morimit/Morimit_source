@@ -9,9 +9,9 @@ license: false
 menu: 
     main:
         name: friends
-        weight: -60
+        weight: -1
         params:
-            icon: friends
+            icon: wave-rect
         
 ---
 

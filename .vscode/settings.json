@@ -1,0 +1,7 @@
+{
+  "editor.inlineSuggest.showToolbar": "onHover",
+
+  "[html]": {
+    "editor.formatOnSave": false
+  }
+}

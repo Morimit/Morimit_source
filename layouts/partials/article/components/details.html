@@ -1,12 +1,23 @@
 <div class="article-details">
     {{ if .Params.categories }}
-    <header class="article-category">
+    {{/*  这个分类标签的颜色变化饱和度太高了  */}}
+    {{/*  <header class="article-category">
         {{ range (.GetTerms "categories") }}
-            <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
+            <a href="{{ .RelPermalink }}" 
+            {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
                 {{ .LinkTitle }}
             </a>
         {{ end }}
-    </header>
+    </header>  */}}
+    {{/*  感觉article list区域太多东西太杂了，还是删掉分类标签比较好，单独的article模块再用这段代码*/}}
+    {{/*  <header class="article-category-custom">
+        {{ range (.GetTerms "categories") }}
+            <a href="{{ .RelPermalink }}" 
+            {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
+                {{ .LinkTitle }}
+            </a>
+        {{ end }}
+    </header>  */}}
     {{ end }}
 
     <h2 class="article-title">
@@ -40,17 +51,18 @@
                 </time>
             </div>
         {{ end }}
-    
     {{ end }}
-
-    
-    {{- if ne .Lastmod .Date -}}
+         
+    {{/*  {{- if ne .Lastmod .Date -}}
     <section class="article-lastmod">
         {{ partial "helper/icon" "clock" }}
         <span>
             {{ T "article.lastUpdatedOn" }} {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST" ) }}
         </span>
     </section>
-    {{- end -}}
-</footer>
+    {{- end -}}  */}}
+    {{ partial "article/components/tags" . }}
+
+    </footer>
+
 </div>
