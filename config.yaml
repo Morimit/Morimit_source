@@ -37,7 +37,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: favicon.ico
+    favicon: images/Miaomi.png
     #加入图片轮播
     enableimgloop: true
 
