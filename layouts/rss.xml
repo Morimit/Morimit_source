@@ -10,8 +10,8 @@
     <channel>
         <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
         <link>{{ .Permalink }}</link>
-        <link rel="shortcut icon" href="{{ . | absURL}}" />
-
+        <!-- <link rel="shortcut icon" href="{{ . | absURL}}" /> -->
+        <link rel="shortcut icon" href="https://morimit.github.io/images/Miaomi.svg" />
         <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
         <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
         <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
