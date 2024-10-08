@@ -1,0 +1,32 @@
+{{ if or (not .Date.IsZero) (.Site.Params.article.readingTime) }}
+<footer class="article-time">
+    {{ if not .Date.IsZero }}
+        <div>
+            {{ partial "helper/icon" "date" }}
+            <time class="article-time--published">
+                {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+            </time>
+        </div>
+    {{ end }}
+
+    {{ if .Site.Params.article.readingTime }}
+        <div>
+            {{ partial "helper/icon" "keyboard" }}
+            <time class="article-words">
+                {{ .WordCount }}字
+            </time>
+        </div>
+    {{ end }}
+{{ end }}
+     
+{{/*  {{- if ne .Lastmod .Date -}}
+<section class="article-lastmod">
+    {{ partial "helper/icon" "clock" }}
+    <span>
+        {{ T "article.lastUpdatedOn" }} {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST" ) }}
+    </span>
+</section>
+{{- end -}}  */}}
+{{ partial "article/components/tags" . }}
+
+</footer>

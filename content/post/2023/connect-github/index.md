@@ -8,10 +8,8 @@ math:
 license: 
 tags:
     - Blog
-    - Log
     - Git
 hidden: false
-comments: true
 draft: false
 ---
 

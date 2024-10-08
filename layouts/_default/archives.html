@@ -13,8 +13,7 @@
     </div>
     {{ end }}*/}}
 
-    {{/*{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}*/}}
-    {{ $pages := where .Site.RegularPages "Section" "post" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}
 

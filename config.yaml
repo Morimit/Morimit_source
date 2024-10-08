@@ -26,13 +26,18 @@ permalinks:
     post: /:year/:slug/
     page: /:slug/
 
+#rss
+outputs:
+  archive:
+  - html
+  - rss
+
 params:
     mainSections:
         - post
-        - life
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: favicon.ico
     #加入图片轮播
     enableimgloop: true
 
@@ -169,7 +174,8 @@ params:
         toggle: false
 
         # Available values: auto, light, dark
-        default: auto
+        # auto 好像是跟随系统了
+        default: light
 
     imageProcessing:
         cover:
@@ -182,20 +188,37 @@ params:
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
-        - identifier: categories
-          name: Categories
-          url: /categories/
+        - identifier: notes
+          name: Notes
+          url: /notes/
           weight: -30
           params:
               icon: wave-rect
-
+        - identifier: archive
+          name: Archive
+          url: /archives/
+          weight: -20
+          params:
+              icon: 
+        - identifier: about
+          name: About
+          url: /about/
+          weight: -10
+          params:
+              icon:        
+        - identifier: rss
+          name: RSS
+          url: https://morimit.github.io/index.xml
+          weight: -5
+          params:
+              icon:                         
         # - identifier: home
         #   name: Home
         #   url: /
         #   weight: -100
         #   params:
         #       ### For demonstration purpose, the home link will be open in a new tab
-        #       newTab: flase
+        #       newTab: false
         #       icon: home
 
     social:

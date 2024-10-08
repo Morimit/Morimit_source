@@ -9,7 +9,6 @@ license: false
 tags: 
     - Blog
 hidden: false
-comments: true
 draft: false
 ---
 

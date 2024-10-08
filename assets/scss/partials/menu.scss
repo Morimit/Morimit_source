@@ -52,7 +52,7 @@
     width: 30px;
     height: 2px;
     background-color: var(--card-text-color-main);
-    border-radius: 4px;
+    border-radius: 2px;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
@@ -136,7 +136,7 @@
     padding: 15px ;
     box-shadow: var(--shadow-l2); //改个阴影
     display: none;
-    border-radius: 10px;  //加个圆角
+    border-radius: 5px;  //加个圆角
 
     margin: 0; //改为0
 
@@ -192,13 +192,13 @@
             align-items:center;
             text-align: center;
                     
-            color: var(--body-text-color);
+            color:  var(--menu-color);
             font-weight: bold;
             &:hover {
-                color: var(--accent-color);
-                svg {
-                    stroke: var(--accent-color);
-                }
+                color: var(--menu-accent);
+                // svg {
+                //     stroke: var(--accent-color);
+                // }
      
             }
         }
@@ -209,7 +209,8 @@
 
         &.current {
             a {
-                color: var(--accent-color);
+                color: var(--menu-accent-light);
+
             }
             svg {
                 stroke: var(--accent-color);
@@ -225,12 +226,13 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center; #设置居中
+    justify-content: center; //设置居中
 
     svg {
         width: 24px;
         height: 24px;
-        stroke: var(--body-text-color);
         stroke-width: 1.33;
+        color: var(--social-media-color);
+
     }
 }

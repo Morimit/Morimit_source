@@ -6,7 +6,6 @@ lastmod: 2023-01-10
 image: Journey.png
 math: 
 tags:
-  - Log
   - Blog
 license: false
 draft: false

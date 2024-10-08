@@ -13,11 +13,21 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --main-top-padding: 50px;
     }
 
-    --body-background: #00eeff10;
+    --menu-bottom-padding:20px;
+
+    --body-background: #eff5f6;
     // --body-background: white;
 
     --article-background: #ffffff8f;
 
+    --quote-color: rgb(186, 203, 209);
+    --social-media-color: rgb(35, 174, 182);
+    --menu-color: rgba(181, 221, 227, 0.875);
+    --menu-accent: rgb(197, 222, 230);
+    --menu-accent-light: rgb(223, 240, 245);
+    --site-name-color: rgba(255, 255, 255, 0.903);
+    --site-name-accent: white;
+    --site-description-color: rgb(167, 204, 209);
     --accent-color: #073333ab;
     --accent-color-darker: #2c4e50;
     --accent-color-text: rgb(255, 255, 255);
@@ -55,8 +65,8 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Card style
 */
 :root {
-    --left-sidebar-background: #2188ad;
-    --list-background: rgba(226, 243, 244, 0.745);
+    --left-sidebar-background: #185064;
+    --list-background: rgba(215, 233, 235, 0.745);
     --search-background:#f1feff;
     --card-background: #ffffff00;
     --card-background-selected: #eaeaea;
@@ -66,7 +76,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --card-text-color-tertiary: #bababa;
     --card-separator-color: rgba(218, 218, 218, 0.5);
 
-    --card-border-radius: 1px;
+    --card-border-radius: 4px;
 
     --card-padding: 10px;
 
@@ -116,7 +126,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --blockquote-border-size: 0px;
     --blockquote-background-color: rgb(248 248 248);
 
-    --heading-border-size: 10px;
+    --heading-border-size: 5px;
 
     --link-background-color: 174, 235, 238;
     --link-background-opacity: 0.5;

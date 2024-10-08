@@ -1,9 +1,24 @@
 [
 
 	{
-        "title": "Mengru的空间",
-        "website": "https://mengru.space/",
-        "image": "avatar.png",
-     "description": ""
+        "title": "Julia Evans",
+        "website": "https://jvns.ca/",
+        "image": "",
+        "description": ""
+    },{
+        "title": "Web Design Museum",
+        "website": "https://www.webdesignmuseum.org/",
+        "image": "",
+        "description": ""
+    },{
+        "title": "Samantha",
+        "website": "https://www.samanthaming.com/",
+        "image": "Samantha.png",
+        "description": ""
+    },{
+        "title": "meyerweb",
+        "website": "https://meyerweb.com/",
+        "image": "",
+        "description": ""
     }
 ]

@@ -23,7 +23,7 @@
     @include respond(md) {
         width: auto;
         padding-top: var(--main-top-padding);
-        padding-bottom: var(--main-top-padding);
+        padding-bottom: var(--menu-bottom-padding);
         max-height: 100vh;
     }
 
@@ -99,7 +99,13 @@
     }
 
 	.site-name {
-        color: var(--accent-color);
+        & > a {
+            color: var(--site-name-color);
+
+            &:hover {
+                color: var(--site-name-accent);
+            }
+        }
         text-align:center; //站点名称居中
         font-size: 1.8rem;
 
@@ -109,7 +115,7 @@
     }
 
 	.site-description {
-        color: var(--body-text-color);
+        color: var(--site-description-color);
         font-weight: normal;
         text-align:center; //站点描述居中
         font-size: 1.6rem;

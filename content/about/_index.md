@@ -2,47 +2,43 @@
 title: About
 description: 
 date: '2023-01-11'
+layout: "about"
 aliases:
   - about-us
   - about-hugo
   - contact
-
 comments: true
-menu:
-    main: 
-        weight: -10
-        params:
-            icon: wave-rect
+
 ---
 
-## 关于我
+# 关于我
 
   - 一只忙于装修博客的猫
   - 大部分时间待在阴凉下，偶尔喜欢晒不热的太阳
   - 可以很忙，也可以不忙
   - 什么都不做的时候也不会觉得无聊
 
-## 最近玩什么
+# 最近玩什么
 
   - 桌面挂机游戏spirit city
   - 古剑三
 
-## 使用过的planner
+# 使用过的planner
 
   - ~~Habitica~~（很有用，但最近两年都没在玩了
   - A4纸（一支笔就能画月日历
-  - OneNote
-  - Obsidian
-  - excel（很多公式都可用
+  - OneNote（拥有无限大的页面，可以手动写双向链接，本地存储
+  - Obsidian（本地存储，可以设置自动或手动备份到云
+  - excel（很多公式都可用，能设置自动化管理页面
   - 灯塔五年日记
 
-## 博文计划
+# 博文计划
 
-  - [ ] 目前的笔记体系（以及整理一下之前的1.0、2.0）
-  - [ ] 博客装修记录
-  - [ ] 翻一下其他文件夹，看看能放上来些啥……
+ - [ ] 目前的笔记体系（以及整理一下之前的1.0、2.0）
+ - [ ] 博客装修记录
+ - [ ] 翻一下其他文件夹，看看能放上来些啥……
 
-## 博客装修碎碎念
+# 博客装修碎碎念
 
 <details>
   <summary>(^◔ᴥ◔^) 2024</summary>
@@ -60,7 +56,8 @@ menu:
     <li>还想进化一下折叠碎碎念的功能，现在折叠用的是&lt;details&gt;标签，要在markdown里的HTML里再写文字就显得非常……局促</li>
 
   </ul>
-
 </details>
 
     
+
+# Inspiring sites

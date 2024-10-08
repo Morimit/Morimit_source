@@ -32,7 +32,7 @@ blockquote.quote {
     padding-left: 5%;
     padding-right: 15%;
     // border: none;
-    border-left: 5px solid var( --card-text-color-main);
+    border-left: 5px solid var(--quote-color);
     background-color: transparent;
     // &::before {
     //     position: absolute;
@@ -115,21 +115,25 @@ blockquote.quote {
 //友情链接双栏
 @media (min-width: 1024px) {
     .article-list--compact.links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         background: none;
         box-shadow: none;
+        font-size: 1rem;
         
         article {
             // background: var(--card-background);
             background-color: var(--article-background);
             border: none;
-            box-shadow: var(--shadow-l2);
-            margin-bottom: 8px;
-            border-radius: 10px;
-            &:nth-child(odd) {
-                margin-right: 8px;
+            a{
+                padding: 10px;
+                h2{
+                    margin: 0;
+                }
             }
+
+            margin-bottom: 8px;
+            border-radius: 5px;
+            margin-right: 8px;
         }
     }
 }
@@ -161,5 +165,44 @@ blockquote.quote {
 // 修改图片渲染的大小
 .gallery-image {
     max-width: 700px;
+
 }
 
+// 鼠标样式
+html
+{
+    cursor: url("../ico/cursor.ico"), default;
+    & a,
+    & .article-content .copyCodeButton {
+        cursor: url("../ico/cursor-light.ico") ,pointer;
+    }
+
+}
+
+// 控制left-side的页脚显示
+.on-phone--column {
+    & .left-sidebar footer.site-footer .copyright{
+        display: none;
+        @include respond(md){
+            display: block;
+            color: var(--menu-color);
+            a {
+                color: var(--menu-color);
+            }
+        }
+    }
+
+    & .copyright {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        color: var(--card-text-color-tertiary);
+        a {
+            color: var(--card-text-color-tertiary);
+        }
+        @include respond(md){
+            display: none;
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 ---
 title: "Blog Build With GitHub Action"
-description: 
+description: 使用脚本自动构建hugo
 date: 2023-01-01T13:50:03+08:00
 lastmod: 2023-01-10
 image: actions.PNG
@@ -8,9 +8,7 @@ math:
 license: 
 tags:
   - Blog
-  - Log
 hidden: false
-comments: true
 draft: false
 ---
 

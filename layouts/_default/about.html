@@ -1,15 +1,52 @@
 {{ define "main" }}
   {{ $pages := where .Site.RegularPages "Section" "about" }}
+
   <style>
     section {
-    color: var(--card-text-color-main);}
+        color: var(--card-text-color-main);
+    }
   </style>
+
   <section class="article-content" >
     <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
     {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
     {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
     
+    <div class="article-list--compact links">
+      {{ $siteResources := resources }}
+      {{ range $i, $link :=  $.Site.Data.links }}
+          <article>
+              <a href="{{ $link.website }}" target="_blank" rel="noopener">
+                  <div class="article-details">
+                      <h2 class="article-title">
+                          {{- $link.title -}}
+                      </h2>
+                      <footer class="article-time">
+                          {{ with $link.description }}
+                              {{ . }}
+                          {{ else }}
+                              {{ $link.website }}
+                          {{ end }}
+                      </footer>
+                  </div>
+          
+                  {{ if $link.image }}
+                      {{ $image := $siteResources.Get (delimit (slice "link-img/" $link.image) "") | resources.Fingerprint "md5" }}
+                      {{ $imageResized := $image.Resize "120x120" }}
+                      <div class="article-image">
+                          <img src="{{ $imageResized.RelPermalink }}" width="{{ $imageResized.Width }}" height="{{ $imageResized.Height }}"
+                              loading="lazy" data-key="links-{{ $link.website }}" data-hash="{{ $image.Data.Integrity }}">
+                      </div>
+                  {{ end }}
+              </a>
+          </article>
+      {{ end }}
+  </div>
   </section>
-  {{ partialCached "footer/footer" . }}
+
+    {{ partial "comments/include" . }}
+    {{- partialCached "footer/footer" . -}}
+
 {{ end }}
+
 

@@ -10,6 +10,7 @@ categories:
     - collection
 hidden: false
 draft: false
+comments: "true"
 ---
 
 ## 魔法阵
