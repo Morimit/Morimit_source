@@ -23,6 +23,7 @@
     // 如果不定义overflow，在normalize.css中overflow默认是visible，则article list上面的两个圆角会被覆盖
     overflow: hidden;
     height: 380px;
+    margin: 0 1em 0;
 
     transition: box-shadow 0.3s ease;
 
@@ -38,6 +39,7 @@
       &:first-child {
         margin-top: 0;
       }
+      margin: 0;
     }
     @include respond(md) {
       height: 390px;
