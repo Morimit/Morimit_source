@@ -36,7 +36,15 @@
     {{ partialCached "footer/footer" . }}
 {{ end }}
 
-
+{{ define "left-sidebar" }}
+    <div id="article-toolbar">
+        <a href="{{ .Site.BaseURL }}" class="back-home">
+            {{ (resources.Get "icons/back.svg").Content | safeHTML }}
+            <span>{{ T "article.back" }}</span>
+        </a>
+    </div>
+    {{ partial "sidebar/left.html" . }}
+{{ end }}
 
 {{ define "right-sidebar" }}
     {{ partialCached "sidebar/right.html" . }}

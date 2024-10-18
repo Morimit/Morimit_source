@@ -7,6 +7,8 @@ image: Journey2.png
 math: 
 tags:
     - Blog
+notes:
+    - Hugo
 license: false
 hidden: false
 draft: false

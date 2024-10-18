@@ -8,6 +8,8 @@ math:
 license: 
 tags:
   - Blog
+notes:
+    - Hugo
 hidden: false
 draft: false
 ---

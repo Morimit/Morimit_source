@@ -25,6 +25,7 @@ enableGitInfo: true
 permalinks:
     post: /:year/:slug/
     page: /:slug/
+        
 
 #rss
 outputs:
@@ -32,9 +33,20 @@ outputs:
   - html
   - rss
 
+taxonomies:
+  tag: tags
+  category: categories
+  note: notes
+
+  
 params:
     mainSections:
         - post
+        - javascript
+        - git
+        - hugo
+        - css
+        
     featuredImageField: image
     rssFullContent: true
     favicon: images/Miaomi.png
@@ -64,6 +76,7 @@ params:
         license:
             enabled: false
             default: Licensed under CC BY-NC-SA 4.0
+
 
     comments:
         enabled: true
@@ -191,13 +204,13 @@ menu:
         - identifier: notes
           name: Notes
           url: /notes/
-          weight: -30
+          weight: -20
           params:
               icon: wave-rect
         - identifier: archive
           name: Archive
           url: /archives/
-          weight: -20
+          weight: -30
           params:
               icon: 
         - identifier: about
@@ -220,6 +233,26 @@ menu:
         #       ### For demonstration purpose, the home link will be open in a new tab
         #       newTab: false
         #       icon: home
+        - identifier: javascript
+          parent: notes
+          name: JavaScript
+          url: /javascript/
+          weight: 
+        - identifier: git
+          parent: notes
+          name: Git
+          url: /git/
+          weight:
+        - identifier: git
+          parent: notes
+          name: Git
+          url: /git/
+          weight:
+        - identifier: hugo
+          parent: notes
+          name: Hugo
+          url: /hugo/
+          weight:
 
     social:
         - identifier: github
@@ -233,6 +266,9 @@ menu:
           url: 
           params:
               icon: 
+
+
+    
 
 related:
     includeNewer: true

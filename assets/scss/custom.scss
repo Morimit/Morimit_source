@@ -1,14 +1,14 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
 
 .right-sidebar {
-    max-height: 100vh;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  max-height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 // .widget {
@@ -22,52 +22,51 @@
 //     }
 // }
 
-
 // 引用块CSS
 // 文件位置：~/assets/scss/custom/_custom.scss
 
 blockquote.quote {
-    position: relative;
-    margin: 1.5em -10em 0 1em ;
-    padding-left: 5%;
-    padding-right: 15%;
-    // border: none;
-    border-left: 5px solid var(--quote-color);
-    background-color: transparent;
+  position: relative;
+  margin: 1.5em -10em 0 1em;
+  padding-left: 5%;
+  padding-right: 15%;
+  // border: none;
+  border-left: 5px solid var(--quote-color);
+  background-color: transparent;
+  // &::before {
+  //     position: absolute;
+  //     left: 7%;
+  //     content: '“';
+  //     color: var(--color-contrast-low);
+  //     font-size: 3em;
+  //     font-weight: bold;
+  //     line-height: 1;
+  // }
+  &.poetry {
+    display: table;
+    padding: 0;
     // &::before {
-    //     position: absolute;
-    //     left: 7%;
-    //     content: '“';
-    //     color: var(--color-contrast-low);
-    //     font-size: 3em;
-    //     font-weight: bold;
-    //     line-height: 1;
+    //     left: -1em;
     // }
-    &.poetry {
-        display: table;
-        padding: 0;
-        // &::before {
-        //     left: -1em;
-        // }
-        p:last-child {
-            margin: 0;
-        }
+    p:last-child {
+      margin: 0;
     }
-    &.en {
-        p {
-            line-height: 1.618;
-            text-align: left;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -moz-hyphens: auto;
-        }
+  }
+  &.en {
+    p {
+      line-height: 1.618;
+      text-align: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
     }
+  }
 }
 // @media (max-width:650px) {
 //     blockquote.quote {
 //         &::before {
 //             position: absolute;
-//             left: 3.5%;          
+//             left: 3.5%;
 //         }
 //     }
 // }
@@ -76,133 +75,141 @@ blockquote.quote {
 //     blockquote.quote {
 //         &::before {
 //             position: absolute;
-//             left: 3.5%; 
-//             top: 0.1%         
+//             left: 3.5%;
+//             top: 0.1%
 //         }
 //     }
 // }
 
-
-
 //文本高斯模糊
 .blur {
-   color: transparent;
-   text-shadow:0px 0px 8px rgba(0,0,0,0.5)
+  color: transparent;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .blur:hover {
-   color: transparent;
-   text-shadow:0px 0px 0px rgba(0,0,0,1)
-  
+  color: transparent;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
 }
-
 
 //文本黑幕效果
 .shady {
-   color:#000;
-   font-weight: bold;
-   box-shadow: 0px -20px 0px rgba(0,0,0,1) inset; 
-   transition: all 0.3s ease;
-}
-.shady:hover{
+  color: #000;
   font-weight: bold;
-   color:#FFF;
-   box-shadow: 0px -20px 0px rgba(0,0,0,1) inset; 
+  box-shadow: 0px -20px 0px rgba(0, 0, 0, 1) inset;
+  transition: all 0.3s ease;
 }
-
-
+.shady:hover {
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0px -20px 0px rgba(0, 0, 0, 1) inset;
+}
 
 //友情链接双栏
 @media (min-width: 1024px) {
-    .article-list--compact.links {
-        display: flex;
-        background: none;
-        box-shadow: none;
-        font-size: 1rem;
-        
-        article {
-            // background: var(--card-background);
-            background-color: var(--article-background);
-            border: none;
-            a{
-                padding: 10px;
-                h2{
-                    margin: 0;
-                }
-            }
+  .article-list--compact.links {
+    display: flex;
+    background: none;
+    box-shadow: none;
+    font-size: 1rem;
 
-            margin-bottom: 8px;
-            border-radius: 5px;
-            margin-right: 8px;
+    article {
+      // background: var(--card-background);
+      background-color: var(--article-background);
+      border: none;
+      a {
+        padding: 10px;
+        h2 {
+          margin: 0;
         }
+      }
+
+      margin-bottom: 8px;
+      border-radius: 5px;
+      margin-right: 8px;
     }
+  }
 }
 
 //修改选中颜色
 ::selection {
-    color: #fff;
-    background: #5ca5c4;
+  color: #fff;
+  background: #5ca5c4;
 }
 //图片轮播
 .swiper-container {
-    max-width: 300px;
-    margin: 2em auto;
-
+  max-width: 300px;
+  margin: 2em auto;
 }
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background-color: #fff;
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        margin: 0 !important;
-    }
+  text-align: center;
+  font-size: 18px;
+  background-color: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 0 !important;
+  }
 }
 
 // 修改图片渲染的大小
 .gallery-image {
-    max-width: 700px;
-
+  max-width: 700px;
 }
 
 // 鼠标样式
-html
-{
-    cursor: url("../ico/cursor.ico"), default;
-    & a,
-    & .article-content .copyCodeButton {
-        cursor: url("../ico/cursor-light.ico") ,pointer;
-    }
-
+html {
+  cursor: url("../ico/cursor.ico"), default;
+  a,
+  .article-content .copyCodeButton,
+  .back-to-top {
+    cursor: url("../ico/cursor-light.ico"), pointer;
+  }
 }
 
 // 控制left-side的页脚显示
 .on-phone--column {
-    & .left-sidebar footer.site-footer .copyright{
-        display: none;
-        @include respond(md){
-            display: block;
-            color: var(--menu-color);
-            a {
-                color: var(--menu-color);
-            }
-        }
+  & .left-sidebar footer.site-footer .copyright {
+    display: none;
+    @include respond(md) {
+      display: block;
+      color: var(--menu-color);
+      a {
+        color: var(--menu-color);
+      }
     }
+  }
 
-    & .copyright {
-        display: block;
-        margin-top: 20px;
-        text-align: center;
-        color: var(--card-text-color-tertiary);
-        a {
-            color: var(--card-text-color-tertiary);
-        }
-        @include respond(md){
-            display: none;
-        }
+  & .copyright {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--card-text-color-tertiary);
+    a {
+      color: var(--card-text-color-tertiary);
     }
+    @include respond(md) {
+      display: none;
+    }
+  }
+}
 
+// main-container的大遮罩(note-left滑动出现的时候同步出现)
+.mask {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  transition: background-color 0.1s;
+  &.show-mask {
+    display: block;
+  }
+  &.show-color {
+    background-color: #809297a9;
+  }
 }

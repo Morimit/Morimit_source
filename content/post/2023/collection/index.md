@@ -7,7 +7,7 @@ image: Sakura_Magic_circle.webp
 math: 
 license: 
 categories: 
-    - collection
+    - Collection
 hidden: false
 draft: false
 comments: "true"

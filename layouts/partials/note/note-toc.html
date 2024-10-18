@@ -1,0 +1,22 @@
+<div class="note-toc">
+  {{/*  toc要拿到每个section和page的title，还要把title和上面的内容链接起来  */}}
+  {{$currentTopSectionName := .Section}} 
+  {{ if ne $currentTopSectionName "post"}}
+
+      {{$currentTopSection := .FirstSection}}
+      <a href="{{$currentTopSection.Permalink}}">{{$currentTopSection.LinkTitle}}</a>
+      {{- $subsections := $currentTopSection.Sections -}}
+
+      {{range $subsections}}
+          {{- $pages := .Pages -}}
+          <span class="chapter">
+            {{.LinkTitle}}
+          </span>
+          {{ $paginator := .Paginate $pages }}
+          {{ range $paginator.Pages }}
+              <a href="{{.Permalink}}" class="chapter-n">{{.LinkTitle}}</a>
+          {{ end }}
+              
+      {{end}}
+  {{end}}
+</div>

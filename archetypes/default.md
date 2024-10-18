@@ -1,15 +1,15 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 description: required
-summary: required
+summary: 二选一
 date: {{ .Date }}
 lastmod:
-image: 
+image: 二选一
 math: 
 license: 
 tags:
 categories:
 hidden: false
-comments: true
+comments: "true"
 draft: true
 ---

@@ -1,0 +1,23 @@
+
+
+{{ define "main"}}
+  <div class="article-content note-content">
+    {{- $page := .Page.Content | safeHTML -}}
+    {{$page}}
+  </div>
+{{end}}
+
+{{ define "left-sidebar" }}
+  {{/*  <div id="article-toolbar">
+      <a href="/notes" class="back-home">
+          {{ (resources.Get "icons/back.svg").Content | safeHTML }}
+          <span>{{ T "article.back" }}</span>
+      </a>
+  </div>  */}}
+  {{ partial "sidebar/note-left.html" . }}
+{{ end }}
+
+
+{{ define "note-toc" }}
+  {{ partial "note/note-section-toc.html" . }}
+{{ end }}

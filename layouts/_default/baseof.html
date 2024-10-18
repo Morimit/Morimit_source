@@ -6,6 +6,7 @@
     </head>
     <body class="{{ block `body-class` . }}{{ end }}">
         {{- partial "head/colorScheme" . -}}
+        {{/*  按照下面的逻辑，只要config文件中打开了右边的toc，那就是一直用extend的模式  */}}
         <div class="container main-container flex 
         {{ block `container-class` . }}
             on-phone--column 
@@ -18,12 +19,14 @@
             {{- block "left-sidebar" . -}}
                 {{ partial "sidebar/left.html" . }}
             {{- end -}}
+            {{- block "note-toc" . -}}{{- end -}}
             <main class="main full-width">
-                {{- block "main" . }}{{- end }}
+                {{- block "main" . }}{{- end -}}
             </main>
-            {{- block "right-sidebar" . -}}{{ end }}
+            {{- block "right-sidebar" . -}}{{- end -}}
         </div>
-        
+        {{- block "top" . -}}{{- end -}}
         {{ partial "footer/include.html" . }}
+        <div class="mask"></div>
     </body>
 </html>

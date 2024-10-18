@@ -1,71 +1,41 @@
 {{ define "main"}}
 
-    {{/*{{- $query := first 1 (where .Site.Pages "Layout" "==" "categories") -}}*/}}
-    {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
-        {{- $terms := $taxonomy.Pages -}}
-        {{ if $terms }}
-        {{/*<h2 class="section-title">{{ $taxonomy.Title }}</h2>*/}}
+        {{/*  {{ $taxonomyObject := $.Site.Taxonomies.categories }}  */}}
+        {{ $taxonomyObject := $.Site.Taxonomies.notes }}
+        {{/*  <pre>{{ debug.Dump $taxonomyObject }}</pre>  */}}
+        {{ $ordered := $taxonomyObject.Alphabetical}}
+
         <h2 class="section-title">Notes</h2>
-        <div class="subsection-list">
+        {{ with $ordered }}
             <div class="article-list--tile">
-                {{ range $terms }}
-                    {{ partial "partials/article-list/tile" (dict "context" . "size" "250x150" "Type" "taxonomy") }}
-                {{ end }}
+                <section>
+                    {{ range .}}
+                    {{/*  {{ partial "partials/article-list/note-list" .}}  */}}
+                    {{ $title := .Page.LinkTitle | plainify}}
+                    {{ $titleL := strings.ToLower $title }}
+                    {{/*  <a href="{{ .Page.RelPermalink }}">  */}}
+                        
+                    <a href="../{{$titleL}}">
+                        <article>
+                          <h2>
+                            {{ $title }}({{ $taxonomyObject.Count $titleL }})
+                          </h2>
+                        </article>
+                    </a>
+                    {{ end }}
+                </section>
             </div>
         {{ end }}
-
-
-
-    {{/*{{- if $query -}}
-        {{- $archivesPage := index $query 0 -}}
-        <section class="widget categories">
-            <div class="widget-icon">
-                {{ partial "helper/icon" "infinity" }}  
-            </div> 
-            <h2 class="widget-title section-title">Categories</h2>
-        <div class="widget-categories--list">
-    <div class="widget">
-        <h3 class="widget-title"> {{ T "widget_categories" }}</h3>
-        <div class="widget-body">
-            <div class="category-list">
-                {{- range $name, $taxonomy := $.Site.Taxonomies.categories }}
-                {{- with $.Site.GetPage (printf "/categories/%s" $name) }}
-                <div class="category-list-item"><a href="{{ .Permalink }}" class="category-list-link">{{ $name }}<span class="category-list-count">{{ $taxonomy.Count}}</a>
-                </span></div>
-                {{- end }}
-                {{- end }}
-            </div>
-        </div>
-    </div>
-        </div>
-        </section>
-    {{- else -}}
-        {{- warnf "Archives page not found. Create a page with layout: archives." -}}
-    {{- end -}}*/}}
-
-    {{/*{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}*/}}
-    {{ $pages := where .Site.RegularPages "Section" "page" }}
-    {{ $Hidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-    {{ $filtered := ($pages | intersect $Hidden) }}
-
-
-    {{ range $filtered.GroupByDate "2006" }}
-    {{ $id := lower (replace .Key " " "-") }}
-        <div class="archives-group" id="{{ $id }}">
-        {{ $url := $.RelPermalink }}
-        {{ if $.Site.Params.TrimTrailingSlash }}
-            {{ $url = $url | replaceRE "/$" "" }}
-        {{ end }}
-        <h2 class="archives-date section-title"><a href="{{ $url }}#{{ $id }}">{{ .Key }}</a></h2>
-        <div class="article-list--compact">
-            {{ range .Pages }}
-                {{ partial "partials/article-list/compact" . }}
-            {{ end }}
-        </div>
-        </div>
-    {{ end }}
-
 {{ end }}
 
+{{ define "left-sidebar" }}
+    <div id="article-toolbar">
+        <a href="{{ .Site.BaseURL }}" class="back-home">
+            {{ (resources.Get "icons/back.svg").Content | safeHTML }}
+            <span>{{ T "article.back" }}</span>
+        </a>
+    </div>
+    {{ partial "sidebar/left.html" . }}
+{{ end }}
 
 

@@ -9,6 +9,8 @@ license:
 tags:
     - Blog
     - Git
+notes:
+    - Git
 hidden: false
 draft: false
 ---

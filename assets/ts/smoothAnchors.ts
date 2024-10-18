@@ -13,22 +13,25 @@
 const anchorLinksQuery = "a[href]";
 
 function setupSmoothAnchors() {
-    document.querySelectorAll(anchorLinksQuery).forEach(aElement => {
-        let href = aElement.getAttribute("href");
-        if (!href.startsWith("#")) {
-            return;
-        }
-        aElement.addEventListener("click", clickEvent => {
-            clickEvent.preventDefault();
+  document.querySelectorAll(anchorLinksQuery).forEach((aElement) => {
+    let href = aElement.getAttribute("href");
+    if (!href.startsWith("#")) {
+      return;
+    }
 
-            let targetId = aElement.getAttribute("href").substring(1);
-            // The replace done on ':' is here for footnotes, as this character would otherwise interfere when used as a CSS selector.
-            let target = document.querySelector(`#${targetId.replace(":", "\\:")}`) as HTMLElement;
+    aElement.addEventListener("click", (clickEvent) => {
+      clickEvent.preventDefault();
 
-            window.history.pushState({}, "", aElement.getAttribute("href"));
-            scrollTo({ top: target.offsetTop, behavior: "smooth" });
-        });
+      let targetId = aElement.getAttribute("href").substring(1);
+      // The replace done on ':' is here for footnotes, as this character would otherwise interfere when used as a CSS selector.
+      let target = document.querySelector(
+        `#${targetId.replace(":", "\\:")}`
+      ) as HTMLElement;
+
+      window.history.pushState({}, "", aElement.getAttribute("href"));
+      scrollTo({ top: target.offsetTop, behavior: "smooth" });
     });
+  });
 }
 
 export { setupSmoothAnchors };

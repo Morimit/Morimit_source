@@ -7,232 +7,274 @@
  */
 
 .hamburger {
-    padding-top: 10px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
 }
+
 .hamburger:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
+
 .hamburger.is-active:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
+
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: #000;
+  background-color: #000;
 }
 
 .hamburger-box {
-    width: 30px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
 }
 
 .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -2px;
+  display: block;
+  top: 50%;
+  margin-top: -2px;
 }
 
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-    width: 30px;
-    height: 2px;
-    background-color: var(--card-text-color-main);
-    border-radius: 2px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
+  width: 30px;
+  height: 2px;
+  background-color: var(--card-text-color-secondary);
+  border-radius: 2px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s; // 没什么影响
+  transition-timing-function: ease;
 }
+
 .hamburger-inner::before,
 .hamburger-inner::after {
-    content: "";
-    display: block;
+  content: "";
+  display: block;
 }
+
 .hamburger-inner::before {
-    top: -10px;
+  top: -10px;
 }
+
 .hamburger-inner::after {
-    bottom: -10px;
+  bottom: -10px;
 }
 
 .hamburger--spin .hamburger-inner {
-    transition-duration: 0.22s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition-duration: 0.25s; // X图标变成汉堡包后的转动时间
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 .hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.01s 0.01s ease-in, opacity 0.1s ease-in; // 汉堡包的头分裂出来的时间和延迟时间
 }
+
 .hamburger--spin .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.01s 0.01s ease-in,
+    transform 0.02s cubic-bezier(0.55, 0.055, 0.675, 0.19); // 汉堡包的底分裂出来的时间和延迟时间，以及变形成X的时间
 }
 
 .hamburger--spin.is-active .hamburger-inner {
-    transform: rotate(225deg);
-    transition-delay: 0.12s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(225deg);
+  transition-delay: 0.03s;
+  transition-timing-function: 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); //汉堡包变成X后转动的时间
 }
+
 .hamburger--spin.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  top: 0;
+  opacity: 0;
+  transition: top 10s ease-out, opacity 0.1s 0.12s ease-out; // 没什么影响
 }
+
 .hamburger--spin.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(-90deg);
-    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.06s ease-out,
+    transform 0.06s 0.06s cubic-bezier(0.215, 0.61, 0.355, 1); // X图标的右边斜杠往下戳的时间，和左边杠变形的时间，两者结合最后变成X
 }
 
 #toggle-menu {
-    background: none;
-    border: none;
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    z-index: 2;
-    cursor: pointer;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 2;
+  cursor: pointer;
 
-    @include respond(md) {
-        display: none;
+  @include respond(md) {
+    display: none;
+  }
+
+  outline: none;
+
+  &.is-active {
+    //由汉堡包转成X，就是添加is-active
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: var(--accent-color);
     }
-
-    outline: none;
-
-    &.is-active {
-        .hamburger-inner,
-        .hamburger-inner::before,
-        .hamburger-inner::after {
-            background-color: var(--accent-color);
-        }
-    }
+  }
 }
 
 /* Menu style */
 .menu {
-    padding-left: 0;
-    list-style: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  // overflow-y: auto;
+  flex-grow: 1;
+  font-size: 1.4rem;
+
+  background-color: var(--card-background);
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(21, 44, 52, 0.489); //改个阴影
+  display: none;
+  border-radius: 5px; //加个圆角
+
+  margin: 0; //改为0
+
+  &.show {
+    display: block;
+  }
+
+  @include respond(md) {
+    align-items: flex-end;
     display: flex;
-    flex-direction: column;
-    align-self: center;
-    // overflow-y: auto;//需不需要滚动条呢？
-    flex-grow: 1;
-    font-size: 1.4rem;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+    margin-top: var(--sidebar-element-separation);
+  }
 
-    background-color: var(--card-background);
-    padding: 15px ;
-    box-shadow: var(--shadow-l2); //改个阴影
-    display: none;
-    border-radius: 5px;  //加个圆角
+  @include respond(xl) {
+    margin-top: 30px;
+  }
 
-    margin: 0; //改为0
+  li {
+    display: flex;
+    vertical-align: middle;
+    padding: 10px 30px;
 
-    &.show {
-        display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+
+      @include respond(xl) {
+        margin-bottom: 15px;
+      }
     }
 
     @include respond(md) {
-        align-items: flex-end;
-        display: flex;
-        background-color: transparent;
-        padding: 0;
-        box-shadow: none;
-        margin: 0;
-        margin-top: var(--sidebar-element-separation);
+      width: 100%;
+      padding: 10px 0;
     }
 
-    @include respond(xl) {
-        margin-top: 30px;
+    svg {
+      position: absolute;
+      stroke-width: 1.33;
+      width: 100px;
+      height: 40px;
     }
 
-    li {
-        display: flex;
-        vertical-align: middle;
-        padding: 10px 30px;
+    a {
+      height: 40px;
+      width: 100px;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
 
-        &:not(:last-of-type) {
-            margin-bottom: 10px;
-            // margin-bottom: 15px;
-
-            @include respond(xl) {
-                // margin-bottom: 20px;
-                margin-bottom: 10px;
-            }
-        }
-
-        @include respond(md) {
-            width: 100%;
-            padding: 10px 0;
-        }
-
-        svg {
-            position: absolute;
-            stroke-width: 1.33;
-            width: 100px;
-            height: 40px;
-        }
-
-        a {
-            height: 40px;
-            width: 100px;
-            display: inline-flex;
-            align-items:center;
-            text-align: center;
-                    
-            color:  var(--menu-color);
-            font-weight: bold;
-            &:hover {
-                color: var(--menu-accent);
-                // svg {
-                //     stroke: var(--accent-color);
-                // }
-     
-            }
-        }
-
-        span {
-            flex: 1;
-        }
-
-        &.current {
-            a {
-                color: var(--menu-accent-light);
-
-            }
-            svg {
-                stroke: var(--accent-color);
-            }
-        }
-
+      color: var(--menu-color);
+      font-weight: bold;
+      &:hover {
+        color: var(--menu-accent);
+        // svg {
+        //     stroke: var(--accent-color);
+        // }
+      }
     }
+
+    span {
+      flex: 1;
+    }
+
+    &.current {
+      a {
+        color: var(--menu-accent-light);
+      }
+      svg {
+        stroke: var(--accent-color);
+      }
+    }
+  }
+
+  &.menu-light-background {
+    box-shadow: 0 2px 10px rgba(201, 207, 210, 0.489); //改个阴影
+
+    @include respond(md) {
+      box-shadow: none;
+    }
+    li a {
+      color: var(--card-text-color-main);
+      @include respond(md) {
+        color: var(--menu-color);
+      }
+    }
+  }
 }
 
 .social-menu {
-    list-style: none;
-    padding: 0%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center; //设置居中
+  list-style: none;
+  padding: 0%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center; //设置居中
 
-    svg {
-        width: 24px;
-        height: 24px;
-        stroke-width: 1.33;
-        color: var(--social-media-color);
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.33;
+    color: var(--social-media-color);
+  }
+}
 
-    }
+.phone-banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+
+  @include respond(md) {
+    display: none;
+  }
+
+  figure {
+    align-self: center;
+    margin: 0 10px;
+  }
+
+  h1 {
+    align-self: center;
+    font-size: 1.3em;
+    margin: 0;
+  }
 }

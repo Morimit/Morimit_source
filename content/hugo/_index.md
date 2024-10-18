@@ -1,0 +1,4 @@
+---
+title: "Hugo"
+layout: note
+---

@@ -1,0 +1,21 @@
+<div class="note-toc">
+  <a href="{{.Permalink}}">{{.LinkTitle}}</a>
+
+  {{/*  要拿到每个section和page的title，还要把title和上面的内容链接起来  */}}
+  {{/*  <pre>{{ debug.Dump site.Data}}</pre>  */}}
+
+  {{- $subsections := .Sections -}}
+      
+  {{ range $subsections }}
+    {{- $pages := .Pages -}}
+    <span class="chapter">
+      {{.LinkTitle}}
+    </span>
+       
+      {{ $paginator := .Paginate $pages }}
+          {{ range $paginator.Pages }}
+              <a href="{{.Permalink}}" class="chapter-n">{{.LinkTitle}}</a>
+      {{ end }}
+                
+  {{end}}
+</div> 

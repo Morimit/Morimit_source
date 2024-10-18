@@ -1,6 +1,6 @@
 {{ define "body-class" }}article-page keep-sidebar{{ end }}
 {{ define "main" }}
-    {{ partial "article/article.html" . }}
+    {{ partial "article-list/article.html" . }}
     
     <div class="article-list--compact links">
         {{ $siteResources := resources }}

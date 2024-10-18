@@ -10,13 +10,12 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 
     @include respond(xl) {
-        --main-top-padding: 50px;
+        --main-top-padding: 40px;
     }
 
     --menu-bottom-padding:20px;
 
     --body-background: #eff5f6;
-    // --body-background: white;
 
     --article-background: #ffffff8f;
 
@@ -35,7 +34,9 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
     --tag-border-radius: 1px;
 
-    --section-separation: 40px;
+    --section-separation: 20px;
+    --container-separation: 15px;
+    --widget-separation: 20px;
 
     --scrollbar-thumb: hsla(180, 29%, 84%, 0.603);
     --scrollbar-track: var(--body-background);
@@ -159,7 +160,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 :root {
     --shadow-l1: 0px 4px 8px rgba(72, 120, 124, 0.096), 0px 0px 2px rgba(194, 43, 43, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
     --shadow-l2: 0px 10px 20px rgba(209, 213, 213, 0.712), 0px 2px 6px rgba(88, 206, 235, 0.096), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    --shadow-l3: 0px 10px 20px rgba(206, 75, 75, 0.04), 0px 2px 6px rgba(207, 58, 58, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    --shadow-l3: 0px 10px 8px rgba(75, 182, 206, 0.04), 0px 2px 6px rgba(207, 58, 58, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.04);
     --shadow-l4: 0px 24px 32px rgba(163, 85, 85, 0.04), 0px 16px 24px rgba(170, 63, 63, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
         0px 0px 1px rgba(0, 0, 0, 0.04);
 }
