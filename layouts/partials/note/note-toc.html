@@ -1,10 +1,11 @@
 <div class="note-toc">
   {{/*  toc要拿到每个section和page的title，还要把title和上面的内容链接起来  */}}
   {{$currentTopSectionName := .Section}} 
+  {{$currentPageName := .LinkTitle }}
   {{ if ne $currentTopSectionName "post"}}
 
       {{$currentTopSection := .FirstSection}}
-      <a href="{{$currentTopSection.Permalink}}">{{$currentTopSection.LinkTitle}}</a>
+      <a href="{{$currentTopSection.Permalink}}" class="top-section">{{$currentTopSection.LinkTitle}}</a>
       {{- $subsections := $currentTopSection.Sections -}}
 
       {{range $subsections}}
@@ -14,7 +15,7 @@
           </span>
           {{ $paginator := .Paginate $pages }}
           {{ range $paginator.Pages }}
-              <a href="{{.Permalink}}" class="chapter-n">{{.LinkTitle}}</a>
+              <a href="{{.Permalink}}" class="chapter-n {{ if eq .LinkTitle $currentPageName }}toc-highlight{{ end }}">{{.LinkTitle}}</a>
           {{ end }}
               
       {{end}}
