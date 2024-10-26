@@ -1,4 +1,5 @@
 baseurl: https://morimit.github.io/
+# baseurl: http://127.0.0.1/
 languageCode: en-us
 theme: stack
 paginate: 5
@@ -278,8 +279,6 @@ related:
         - name: tags
           weight: 100
 
-        - name: categories
-          weight: 200
 
 markup:
     goldmark:

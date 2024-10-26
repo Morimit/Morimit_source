@@ -294,12 +294,17 @@
   line-height: var(--article-line-height);
 
   & > p {
-    margin: 1.5em 0.2em;
+    margin: 0.5em 0.2em;
+  }
+
+  & > ul {
+    margin: 0;
   }
 
   ul li::marker {
     color: var(--quote-color);
   }
+
   h1,
   h2,
   h3,
@@ -371,12 +376,12 @@
     }
   }
 
-  // 终于找到代码区块了
+  // 代码区块
   pre {
     margin: 10px 0.4em;
     overflow: auto;
     display: block;
-    max-height: 400px;
+    max-height: 600px;
     // background-color: var(--pre-background-color);
     background-color: var(--pre-background-color) !important;
     color: var(--pre-text-color);
@@ -469,7 +474,7 @@
     right: 20px;
     background: var(--card-background);
     border: none;
-    box-shadow: var(--shadow-l2);
+    box-shadow: var(--shadow-l3);
     border-radius: var(--tag-border-radius);
     padding: 8px 16px;
     color: var(--card-text-color-main);

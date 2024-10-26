@@ -15,6 +15,10 @@
     }
   }
 
+  .note-right {
+    max-width: 13%;
+  }
+
   &.extended {
     @include respond(md) {
       // max-width: 1024px;

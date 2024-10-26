@@ -4,13 +4,14 @@
   flex-shrink: 0;
   position: sticky;
   top: 0;
-  width: 130px;
+  width: 60%;
   height: 100vh;
   border-right: 5px solid rgba(255, 255, 255, 0.49);
   padding-top: var(--main-top-padding);
   // padding-left: 10px;
   @include respond(md) {
     display: flex;
+    max-width: 15%;
   }
 
   .top-section {
@@ -18,18 +19,18 @@
   }
   .chapter {
     font-weight: bold;
-    padding: 20px 0 10px 5px;
+    padding: 20px 0 10px 10px;
     color: var(--card-text-color-main);
   }
 
   .chapter-n {
-    padding: 5px 0 5px 5px;
+    padding: 5px 15px 5px;
   }
 
   &.toc-slide {
     position: absolute;
     left: -150px;
-    width: 150px;
+    // width: 150px;
     z-index: 4;
     display: flex;
     border: none;

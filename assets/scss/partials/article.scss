@@ -9,10 +9,6 @@
   gap: 2rem;
   justify-content: center;
 
-  @include respond(md) {
-    min-width: 770px;
-  }
-
   article {
     display: grid;
     // min-width: 300px;
@@ -76,7 +72,7 @@
 
     .list-time {
       align-self: flex-end;
-      padding: 0 20px 20px;
+      padding: 0 10px 20px;
     }
 
     &.has-image {
@@ -108,10 +104,10 @@
   font-weight: 600;
   margin: 10px 0;
   color: var(--card-text-color-main);
-  font-size: 1.9rem;
+  font-size: 2rem;
 
-  @include respond(xl) {
-    font-size: 2rem;
+  @include respond(md) {
+    font-size: 1.7rem;
   }
 
   a {
@@ -143,7 +139,7 @@
   display: flex;
   align-items: center;
   color: var(--card-text-color-tertiary);
-  gap: 15px;
+  gap: 10px;
   margin-top: 10px;
   flex-wrap: wrap;
 
@@ -334,7 +330,6 @@
     }
 
     .article-details {
-      border-radius: var(--card-border-radius);
       position: relative;
       height: 100%;
       width: 100%;

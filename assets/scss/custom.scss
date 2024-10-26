@@ -1,7 +1,7 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
 
-.right-sidebar {
-  max-height: 100vh;
+.right-sidebar,
+.note-toc {
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -9,6 +9,10 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.right-sidebar {
+  max-height: 80vh;
 }
 
 // .widget {
@@ -27,12 +31,9 @@
 
 blockquote.quote {
   position: relative;
-  margin: 1.5em -10em 0 1em;
-  padding-left: 5%;
-  padding-right: 15%;
-  // border: none;
+  margin: 1.5em 1em 0 1em;
   border-left: 5px solid var(--quote-color);
-  background-color: transparent;
+  width: 96%;
   // &::before {
   //     position: absolute;
   //     left: 7%;
@@ -163,6 +164,7 @@ blockquote.quote {
 html {
   cursor: url("../ico/cursor.ico"), default;
   a,
+  details,
   .article-content .copyCodeButton,
   .back-to-top {
     cursor: url("../ico/cursor-light.ico"), pointer;
@@ -173,6 +175,7 @@ html {
 .on-phone--column {
   & .left-sidebar footer.site-footer .copyright {
     display: none;
+    // @mixin respond($breakpoint)
     @include respond(md) {
       display: block;
       color: var(--menu-color);
@@ -190,6 +193,7 @@ html {
     a {
       color: var(--card-text-color-tertiary);
     }
+    // @mixin respond($breakpoint)
     @include respond(md) {
       display: none;
     }

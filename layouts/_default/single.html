@@ -80,7 +80,8 @@
         {{ partial "sidebar/right.html" . }}
     {{ end }} -->
     {{/*  {{ partial "sidebar/right.html" . }}  */}}
-    <aside class="sidebar right-sidebar sticky">
+    {{$currentTopSectionName := .Section}} 
+    <aside class="sidebar right-sidebar sticky {{ if ne $currentTopSectionName "post"}}note-right{{end}}">
         {{ partial "widget/toc.html" . }}
     </aside>
 {{ end }}
