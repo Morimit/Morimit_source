@@ -14,7 +14,7 @@ draft: false
 ---
 
 ## Reference
-
+- [GitHub Actions 入门教程](https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 - [Build Hugo With GitHub Action](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 - [Create and host a blog with Hugo and GitHub Pages in less than 30 minutes](https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/)
 - [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token)
@@ -42,13 +42,24 @@ ssh-keygen -t rsa -b 4096 -C "yourmail@mail.com" -f ~/.ssh/gh-pages -N ""
 注意：此 private key 的名称之后要填入 Action 脚本的特定位置。
 ![ssh-private](ssh-private.PNG)
 ### 给源码仓库添加脚本
-在源码仓库中找到Actions，新建workflow：
+在源码仓库中找到Actions栏，新建workflow：
 ![new workflows](deploy1.png)
 
 可以直接找到workflow的模板：
 ![workflow templates](deploy2.png)
 
 ![template](deploy3.png)
+
+可以在右侧查看actions市场和GitHub Actions的使用文档：
+![actions & docs](deploy4.png)
+
+### 修改脚本内容
+一些专用术语：
+
+- workflow （工作流程）：持续集成一次运行的过程，就是一个 workflow。
+- job （任务）：一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务。
+- step（步骤）：每个 job 由多个 step 构成，一步步完成。
+- action （动作）：每个 step 可以依次执行一个或多个命令（action）。
 
 脚本内容修改如下：
 ```shell {lineNos=true, tabWidth=2}
@@ -91,6 +102,7 @@ jobs:
 ```
 - 注意：`publish_branch`要和该仓库绑定GitHub Pages的发布branch相一致
 - 上面的步骤完成后，每次从本地git push源文件到GitHub都会触发GitHub Actions脚本把`./public`文件夹更新到GitHub pages。
+
 
 ## 搭建完成后的workflow
 

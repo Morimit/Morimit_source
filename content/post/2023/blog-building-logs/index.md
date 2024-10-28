@@ -22,8 +22,6 @@ draft: false
   - 参考一些博客、小说、视频、新闻网站，展示页适合使用摊开的卡片形式，可以一目了然地看到所有posts的信息
   - **posts在本博客中是使用tags来管理的、互相没有上下级关联的博文**
 
-#### 存档
-  存放所有notes和posts中的博文，考虑到博文的数量，按年份来分隔比较合理，并且不需要分页，因为分页有种切割了时间流的感觉。
 
 #### 笔记
   - 存放所有notes——以文档的形式罗列，每个note都具有总体章节目录和本节内容目录
@@ -31,11 +29,17 @@ draft: false
   - 由于页面的布局很满了，所以目录的滚动条都要隐藏，鼠标放在目录上能滚动即可
   - 还有有种方式是折叠目录，但我更喜欢摊开的感觉
 
+#### 项目
+  存放一些小项目。
+
+#### 存档
+  存放所有notes和posts中的博文，考虑到博文的数量，按年份来分隔比较合理，并且不需要分页，因为分页有种切割了时间流的感觉。
+
 #### 关于
 关于网站的信息和一些碎碎念。
 
 #### RSS订阅
-放这个是怕菜单目录太空了。
+可以使用inoreader等RSS阅读器来订阅博文。
 
 ## 搭建记录
 ### 一句话总结
@@ -104,11 +108,13 @@ hugo
   - 需要将网站源码推送到远端
   - 远端需要一个静态网站托管服务/云主机
   - 远端源码仓库有变动，就要重新用`hugo`命令生成一次public文件夹，并把变动后的public文件夹推送给托管网站/云主机
+  - 托管服务通过public文件夹展示网页
 - 对应的步骤是：
   - 使用git管理代码变化
   - 将本地git仓库与GitHub仓库连接：[用 SSH 方式配置多个账号连接 GitHub]({{<ref "../connect-github/index.md">}} "connect git to GitHub")
   - 新建两个GitHub仓库（GitHub有提供静态网站托管服务——GitHub Pages）
   - 存放源码的仓库中用GitHub Actions建立CI/CD：[Hugo workflow]({{<ref "../blog-build-with-actions.md">}})（检测到git push操作后将public文件夹推送给GitHub Pages绑定的仓库）
+  - [使用GitHub Pages部署项目]({{<ref "../../2024/about-github-pages/index.md">}})
 
 ![workflow](workflow.png)
 
@@ -141,8 +147,7 @@ hugo
   - [Compare functions：非常好用的比较函数](https://gohugo.io/functions/compare/)
   - [Glossary of terms：不懂得术语可以随时在此查询](https://gohugo.io/getting-started/glossary/)
 
-### 本博客主题的核心技术
-- 本博客的图片展示用了一个JavaScript库photoswipe
+
 ### 添加内容
 此时可以愉快地为博客添加内容了。因为每次添加frontmatter非常繁杂，所以建议基于archetypes文件夹中的模板来创建新markdown文档：
 

@@ -1,0 +1,29 @@
+{{ define "main"}}
+        <h2 class="section-title">Projects</h2>
+        
+            <div class="article-list--tile">
+                <section>
+                    <a href="{{ .Site.BaseURL }}/calculator">
+                        <article>
+                          <h2>
+                            calculator
+                          </h2>
+                        </article>
+                    </a>
+                    
+                </section>
+            </div>
+        
+{{ end }}
+
+{{ define "left-sidebar" }}
+    <div id="article-toolbar">
+        <a href="{{ .Site.BaseURL }}" class="back-home">
+            {{ (resources.Get "icons/back.svg").Content | safeHTML }}
+            <span>{{ T "article.back" }}</span>
+        </a>
+    </div>
+    {{ partial "sidebar/left.html" . }}
+{{ end }}
+
+
