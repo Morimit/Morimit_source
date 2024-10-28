@@ -13,8 +13,9 @@ draft: false
 ---
 
 ## 添加文章
-
-### 添加post文章
+### 关于notes和posts
+本博客中二者的划分可查看：[notes和posts区域]({{<ref "blog-building-logs/index.md#页面规划">}})
+### 添加posts文章
 不需要指定模板，Hugo会使用 `archetypes/default.md`模板来建立文档：
 ```bash
 hugo new post/my-first-post.md

@@ -244,11 +244,6 @@ menu:
           name: Git
           url: /git/
           weight:
-        - identifier: git
-          parent: notes
-          name: Git
-          url: /git/
-          weight:
         - identifier: hugo
           parent: notes
           name: Hugo

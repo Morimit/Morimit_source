@@ -99,9 +99,13 @@ git push origin main #推送到远端main分支
 
 ### 流程总结
 1. 确保SSH连接成功
-2. 新建本地仓库，在项目文件夹目录下打开git bash终端。
-3. 将本地仓库git初始化 `git init`
-4. 在本地添加远程仓库的SSH地址 `git remote add origin git@second.github.com:Morimit/Morimit_source.git` (注意这里的账号名 `git@second.github.com` 是和 `~/.ssh/config` 文件中配置一致的)
+2. 在项目文件夹目录下打开git bash终端。
+3. 将文件夹设为git仓库： `git init`
+4. 在本地添加远程仓库的SSH地址 
+   ```bash
+   git remote add origin git@second.github.com:Morimit/Morimit_source.git
+   ```
+   (注意这里的账号名 `git@second.github.com` 是和 `~/.ssh/config` 文件中配置一致的)
 5. 配置git账号: `git config user.name "Morimit" ` 和 `git config user.email "firstmail@gmail.com"` 。
 6. 添加到暂存区和提交到当前分支： `git add .` 、 `git commit -m "comments"`
 7. 推送到远程仓库： `git push origin main`

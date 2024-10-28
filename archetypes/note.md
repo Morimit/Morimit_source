@@ -1,10 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 description: required
-summary: 二选一
+summary: 
 date: {{ .Date }}
 lastmod:
-image: 二选一
+image: 
 math: 
 license: 
 notes:

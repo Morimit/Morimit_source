@@ -19,7 +19,7 @@ draft: false
 - 动态博客
 
 从博客开发的角度看，动态博客多了应用服务器和数据库的部分。
-![典型动态博客架构](典型动态博客架构.png)
+![典型动态博客架构 | 来源：https://www.manning.com/books/hugo-in-action](典型动态博客架构.png)
 
 {{<quote>}}
 一些流行的Web技术栈包括LAMP(Linux、Apache、MySQL、PHP)、Microsoft.NET(IIS、ASP.NET、MS SQL Server)、MEAN(MongoDB、Express、Angular、Node.js)和MERN(MongoDB、Express、Reaction、Node.js)。
@@ -60,10 +60,10 @@ draft: false
 
 了解博客生成器之前，最好先了解Jamstack。J、A、M分别代表JavaScript、APIs、Markup，也即此技术栈的核心：
 
-![Jamstack](jamstack静态博客架构.png)
+![Jamstack | 来源：https://www.manning.com/books/hugo-in-action](jamstack静态博客架构.png)
 
 首次发出获取HTML页面的请求运行时Jamstack与传统Web技术栈的对比：
-![与动态站点的web技术栈对比](对比.png)
+![与动态站点的web技术栈对比 | 来源：https://www.manning.com/books/hugo-in-action](对比.png)
 
 {{<quote>}}
 使用Jamstack，编译步骤已经执行了数据库处理和基于应用程序逻辑的拼接。 这种HTML生成并不是针对每个请求都发生的。 因此，该请求不需要通过互联网访问原始服务器。 而是在地理位置上靠近客户端的CDN提供内容。

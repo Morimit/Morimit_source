@@ -19,15 +19,16 @@ draft: false
 - 一些其他posts
 ### 页面规划
 #### 主页
-  - 参考一些博客、小说、视频、新闻网站，展示页适合使用摊开的卡片形式，可以一目了然地看到所有posts的信息。
-  - posts在本博客中是使用tags来管理的、互相没有上下级关联的博文。
+  - 参考一些博客、小说、视频、新闻网站，展示页适合使用摊开的卡片形式，可以一目了然地看到所有posts的信息
+  - **posts在本博客中是使用tags来管理的、互相没有上下级关联的博文**
 
 #### 存档
   存放所有notes和posts中的博文，考虑到博文的数量，按年份来分隔比较合理，并且不需要分页，因为分页有种切割了时间流的感觉。
 
 #### 笔记
-  - 存放所有notes——以文档的形式罗列，每个note都具有总体章节目录和本节内容目录。
-  - 由于页面的布局很满了，所以目录的滚动条都要隐藏，鼠标放在目录上能滚动即可。
+  - 存放所有notes——以文档的形式罗列，每个note都具有总体章节目录和本节内容目录
+  - **notes在本博客中是使用notes分类来管理、互相之间有层级关系的博文，且不会出现在主页展示**
+  - 由于页面的布局很满了，所以目录的滚动条都要隐藏，鼠标放在目录上能滚动即可
   - 还有有种方式是折叠目录，但我更喜欢摊开的感觉
 
 #### 关于
@@ -124,15 +125,14 @@ hugo
   - `.`代表传入每个区域的上下文（context）
   - layouts文件夹中最重要的是index.html，它是整个网站的home页面布局。
   - baseof.html是layouts/_default中每个文件布局的模板
-  - Hugo有leaf bundle和branch bundle的概念：![leaf bundle和branch bundle](page-bundles.png)
+  - Hugo有leaf bundle和branch bundle的概念：![图片来源：https://www.manning.com/books/hugo-in-action](page-bundles.png)
   - 每个branch bundle都是section，section页面默认对应list.html，根目录的section页面（比如上图的about）对应_default文件夹中的同名html文件（about.html）
   - 每个leaf bundle都是single页面，所有single页面对应single.html
   - Hugo没有subsection的概念，当section和subsection需要有不同布局的时候，如果不能修改生成器代码，就只能曲折地实现——把根目录下的section页面当作subsection
   - 本博客中posts和notes中的单页面都对应single.html，但它们分属不同的section，所以可以拿sectionName来做区分
   - 除了使用默认的tags和categories来分类外，可以自定义分类，本博客就自定义了notes分类。
-  - layouts中相似的布局可以解耦出来，放到partials文件夹下。比如home页面和about页面都需要left banner，那么left banner就可以拆分出来作为一个组件。使用partials和定义blocks的区别：![partials VS blocks](partialsVSblocks.png)
+  - layouts中相似的布局可以解耦出来，放到partials文件夹下。比如home页面和about页面都需要left banner，那么left banner就可以拆分出来作为一个组件。使用partials和定义blocks的区别：![图片来源：https://www.manning.com/books/hugo-in-action](partialsVSblocks.png)
   - Hugo支持在markdown文件中插入html代码，可以直接插入标签，也可以用Go模板语言调用layouts中定义的shortcodes。
-  - 
 - 一些可能用到的参考：
   - [Page methods：每个single页面的 `.` 都是page object](https://gohugo.io/methods/page/)
   - [Go template: functions, operators, and statements](https://gohugo.io/functions/go-template/)
@@ -141,7 +141,8 @@ hugo
   - [Compare functions：非常好用的比较函数](https://gohugo.io/functions/compare/)
   - [Glossary of terms：不懂得术语可以随时在此查询](https://gohugo.io/getting-started/glossary/)
 
-
+### 本博客主题的核心技术
+- 本博客的图片展示用了一个JavaScript库photoswipe
 ### 添加内容
 此时可以愉快地为博客添加内容了。因为每次添加frontmatter非常繁杂，所以建议基于archetypes文件夹中的模板来创建新markdown文档：
 
