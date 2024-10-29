@@ -10,18 +10,18 @@
             <div class="article-list--tile">
                 <section>
                     {{ range .}}
-                    {{/*  {{ partial "partials/article-list/note-list" .}}  */}}
-                    {{ $title := .Page.LinkTitle | plainify}}
-                    {{ $titleL := strings.ToLower $title }}
-                    {{/*  <a href="{{ .Page.RelPermalink }}">  */}}
-                        
-                    <a href="../{{$titleL}}">
-                        <article>
-                          <h2>
-                            {{ $title }}({{ $taxonomyObject.Count $titleL }})
-                          </h2>
-                        </article>
-                    </a>
+                        {{/*  {{ partial "partials/article-list/note-list" .}}  */}}
+                        {{ $title := .Page.LinkTitle | plainify}}
+                        {{ $titleL := strings.ToLower $title }}
+                        {{/*  <a href="{{ .Page.RelPermalink }}">  */}}
+                            
+                        <a href="../{{$titleL}}">
+                            <article>
+                            <h2>
+                                {{ $title }}({{ $taxonomyObject.Count $titleL }})
+                            </h2>
+                            </article>
+                        </a>
                     {{ end }}
                 </section>
             </div>

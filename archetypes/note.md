@@ -7,7 +7,7 @@ lastmod:
 image: 
 math: 
 license: 
-notes:
+notes: required
 tags:
 hidden: false
 comments: "true"
