@@ -1,5 +1,5 @@
 ---
-title: "1.2 第二节"
+title: "1.2 代码质量"
 description: this is description
 date: 2024-10-04T17:05:36+08:00
 lastmod:
@@ -9,4 +9,6 @@ notes:
 hidden: false
 draft: false
 ---
-## 第二节
+## 
+
+

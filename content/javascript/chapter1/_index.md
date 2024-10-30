@@ -1,5 +1,5 @@
 ---
-title: "Chapter1 基础语法"
+title: "Chapter1 基础知识"
 layout: list
 ---
 chapter1~~~~~~

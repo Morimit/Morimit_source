@@ -106,10 +106,6 @@
   color: var(--card-text-color-main);
   font-size: 2rem;
 
-  @include respond(md) {
-    font-size: 1.7rem;
-  }
-
   a {
     color: var(--card-text-color-main);
 
