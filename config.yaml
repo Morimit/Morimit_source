@@ -205,7 +205,7 @@ menu:
         - identifier: notes
           name: Notes
           url: /notes/
-          weight: -20
+          weight: -30
           params:
               icon: wave-rect
         - identifier: archive
@@ -217,15 +217,10 @@ menu:
         - identifier: about
           name: About
           url: /about/
-          weight: -30
+          weight: -20
           params:
               icon:        
-        - identifier: rss
-          name: RSS
-          url: https://morimit.github.io/index.xml
-          weight: -10
-          params:
-              icon: 
+
         - identifier: project
           name: Project
           url: /project/
@@ -259,15 +254,16 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: 
+          url: https://github.com/Morimit
           params:
               icon: brand-github
 
-        - identifier: 
-          name:
-          url: 
+        - identifier: rss
+          name: RSS
+          url: https://morimit.github.io/index.xml
           params:
-              icon: 
+              icon: rss
+
 
 
     
