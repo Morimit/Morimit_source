@@ -83,7 +83,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          # The Hugo version to download (if necessary) and use. Example: 0.58.2
+          hugo-version: '0.108.0'  # default is 'latest', better use your local development version
           extended: true
 
       - name: Build
