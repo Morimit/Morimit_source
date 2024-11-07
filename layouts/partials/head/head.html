@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="{{ . | absURL }}" />
 {{ end }}
 
-{{- if not hugo.IsServer -}}
+{{- if not .Site.IsServer -}}
     {{- template "_internal/google_analytics_async.html" . -}}
 {{- end -}}
 {{- partial "head/custom.html" . -}}
