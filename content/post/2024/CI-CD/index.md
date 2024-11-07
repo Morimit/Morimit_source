@@ -8,7 +8,7 @@ image: https://mlops-guide.github.io/MLOps/CICDML/ci-cd.png
 math: 
 license: 
 tags:
-categories:
+    - Workflow
 hidden: false
 comments: "true"
 draft: false

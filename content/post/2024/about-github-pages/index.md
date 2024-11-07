@@ -8,7 +8,7 @@ image: pages0.png
 math: 
 license: 
 tags:
-categories:
+    - Blog
 hidden: false
 comments: "true"
 draft: false

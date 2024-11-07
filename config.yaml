@@ -169,7 +169,7 @@ params:
             limit: 5
 
         tagCloud:
-            limit: 10
+            limit: 30
 
     opengraph:
         twitter:
