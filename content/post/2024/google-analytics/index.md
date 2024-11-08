@@ -52,6 +52,6 @@ services:
 最后虽然文档说是30分钟，但我却是过几个小时后才在Google Analytics上看到访客数据。
 ## References
 
-- (比较老的教程，但来龙去脉写得比较完整)[https://note.qidong.name/2017/07/05/google-analytics-in-hugo/]
-- (与上面相反)( https://immwind.com/google-analytics-for-hugo/)
-- (主要步骤还是看最新的GA官方文档)[https://support.google.com/analytics/answer/9304153?sjid=1742798696676955087-NC]
+- [比较老的教程，但来龙去脉写得比较完整](https://note.qidong.name/2017/07/05/google-analytics-in-hugo/)
+- [与上面相反](https://immwind.com/google-analytics-for-hugo/)
+- [主要步骤还是看最新的GA官方文档](https://support.google.com/analytics/answer/9304153?sjid=1742798696676955087-NC)
