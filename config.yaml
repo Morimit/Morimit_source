@@ -111,10 +111,10 @@ params:
 
         # Waline client configuration see: https://waline.js.org/en/reference/client.html
         waline:
-            serverURL: https://waline-comment-l1abg5akz-phoebelinyygmailcoms-projects.vercel.app/
+            serverURL: https://waline-comment-five-pi.vercel.app
             lang: en
             visitor: 
-            avatar: 
+            avatar: img/Miaomi.png
             emoji:
                 - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
             requiredMeta:
