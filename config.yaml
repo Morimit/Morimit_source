@@ -5,8 +5,7 @@ theme: stack
 paginate: 5
 title: Miaomi
 
-# Change it to your Disqus shortname before using
-disqusShortname: stack
+
 
 # GA Tracking ID
 services:
@@ -83,7 +82,7 @@ params:
 
     comments:
         enabled: true
-        provider: disqus
+        provider: waline
 
         disqusjs:
             shortname:
@@ -112,17 +111,17 @@ params:
 
         # Waline client configuration see: https://waline.js.org/en/reference/client.html
         waline:
-            serverURL:
-            lang:
-            visitor:
-            avatar:
+            serverURL: https://waline-comment-l1abg5akz-phoebelinyygmailcoms-projects.vercel.app/
+            lang: en
+            visitor: 
+            avatar: 
             emoji:
                 - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
             requiredMeta:
                 - name
                 - email
                 - url
-            placeholder:
+            placeholder: Welcome to leave your comments~
             locale:
                 admin: Admin
 

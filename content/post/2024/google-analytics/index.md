@@ -1,5 +1,5 @@
 ---
-title: "给博客添加Google Analytics"
+title: "给Hugo博客添加Google Analytics"
 description: 图片来源：Google Marketing Platform
 summary: 
 date: 2024-11-07T13:06:27+08:00
