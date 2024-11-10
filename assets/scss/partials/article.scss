@@ -50,15 +50,7 @@
         height: 100%;
         object-fit: cover;
       }
-      height: 150px;
-
-      @include respond(md) {
-        height: 200px;
-      }
-
-      @include respond(xl) {
-        height: 250px;
-      }
+      height: 200px;
     }
 
     @for $i from 1 through length($defaultTagBackgrounds) {
@@ -104,7 +96,8 @@
   font-weight: 600;
   margin: 10px 0;
   color: var(--card-text-color-main);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.618;
 
   a {
     color: var(--card-text-color-main);
@@ -142,13 +135,13 @@
   svg {
     vertical-align: middle;
     margin-right: 5px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     stroke-width: 1.33;
   }
 
   time {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   & > div {
@@ -178,7 +171,7 @@
   display: flex;
   align-items: center;
   a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--card-text-color-tertiary);
     margin-right: 5px;
   }
@@ -237,7 +230,7 @@
 
     .article-time,
     .article-lastmod {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     .article-preview {
