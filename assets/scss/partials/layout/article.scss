@@ -105,10 +105,8 @@
 
     transition: box-shadow 0.3s ease;
 
-    box-shadow: var(--shadow-l1);
-
     &:hover {
-      box-shadow: var(--shadow-l2);
+      box-shadow: var(--shadow-l5);
     }
 
     svg {
