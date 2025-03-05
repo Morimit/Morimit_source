@@ -144,11 +144,25 @@ Gmail在打开IMAP的同时也会打开SMTP
 
 此外还要打开Google账号的两步验证，然后才能生成一个App password（后面要填入环境变量）。
 
+### 开启163邮箱的IMAP/SMTP服务
+Gmail被封了，还是用上了163邮箱。
+
+首先找到设置，开启IMAP/SMTP服务
+![163mail settings](163-SMTP.png)
+比较坑的地方是授权码只有180天有效期。
+
+---
+
+
+有个小坑：SMTP_USER的值必须和SENDER_EMAIL的值一致，否则会一直收不到邮件通知，再查看vercel的日志，会发现错误代码553
+
+![mail error](vercel-mail-error.png)
+
 ### 配置Vercel环境变量
 需要配置以下环境变量：
-- SMTP_SERVICE：Gmail
+- SMTP_SERVICE：Gmail/163（如果是waline支持的运营商，就不用填SMTP_HOST 和 SMTP_PORT）
 - SMTP_USER：youremail@gmail.com
-- SMTP_PASS：填上面获取的App password，有16位，要删除空格
+- SMTP_PASS：gmail填上面获取的App password，有16位，要删除空格/163mail填SMTP授权码
 - SITE_NAME：填博客的名字
 - SITE_URL：https://your-site-domain-name
 - AUTHOR_EMAIL：填自己常用的邮箱(最好是上面评论管理的管理员邮箱)，用来接收评论通知
@@ -156,7 +170,7 @@ Gmail在打开IMAP的同时也会打开SMTP
 以下是选填的环境变量:
 
 - SENDER_NAME: Miaomi's Blog
-- SENDER_EMAIL: 自定义发送邮件的发件地址
+- SENDER_EMAIL: 自定义发送邮件的发件地址（如果使用gmail可以自定义，如果用163则必须保证此值和SMTP_USER一致）
 - MAIL_SUBJECT: Dear {{parent.nick | safe}}，your comment on {{site.name | safe}}'s Blog received a reply
 - MAIL_TEMPLATE: 自定义评论回复邮件内容(可直接贴HTML代码)
 - MAIL_SUBJECT_ADMIN: 亲爱的站长，您的博客{{site.name | safe}}收到一条新评论，请及时回复哦~
@@ -169,3 +183,4 @@ Gmail在打开IMAP的同时也会打开SMTP
 默认的邮件模板如下：
 ![received mail](comment-mail.png)
 有时间一定要改一下模板，看着和我的主题色不太搭~
+
