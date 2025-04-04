@@ -101,20 +101,21 @@ let Stack = {
      * Add back to top button to single page
      */
     const backToTop = document.querySelector("button.back-to-top");
-    document.addEventListener("scroll", () => {
-      const scrollContainer = () => {
-        // document.body 对应Safiri
-        return document.documentElement || document.body;
-      };
-
-      if (scrollContainer().scrollTop > 100) {
-        backToTop.classList.remove("hidden");
-      } else {
-        backToTop.classList.add("hidden");
-      }
-    });
 
     if (backToTop) {
+      document.addEventListener("scroll", () => {
+        const scrollContainer = () => {
+          // document.body 对应Safiri
+          return document.documentElement || document.body;
+        };
+
+        if (scrollContainer().scrollTop > 100) {
+          backToTop.classList.remove("hidden");
+        } else {
+          backToTop.classList.add("hidden");
+        }
+      });
+
       backToTop.addEventListener("click", () => {
         document.body.scrollIntoView({
           behavior: "smooth",
